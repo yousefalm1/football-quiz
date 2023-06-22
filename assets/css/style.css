@@ -12,9 +12,25 @@ body {
     font-family: ;
     background-image: url(/assets/images/);
 }
-
-
-
+ /* logo */
 .logo {
     height: 70px;
 }
+
+/* Games Area Container */
+
+.quiz-area-container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: grey;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
