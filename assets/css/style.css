@@ -58,16 +58,20 @@ body {
 
 .btn {
     padding: 10px;
-    background-color: lightskyblue;
-    border: none;
+    background-color: #73A5C6;
     border-radius: 15px;
     cursor: pointer;
     color: white;
     font-size: large;
     font-weight: bold;
+    border: 1px solid #528AAE;
+
 }
 
+.btn:hover {
 
+    border-color:  black;
+}
 
 /* next questions btn */
 .next-container {
