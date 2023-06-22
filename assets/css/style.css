@@ -32,10 +32,14 @@ body {
  /* styling for where the question will go */
 
  .question-container {
-    margin-bottom: 250px;
+    margin-bottom: 100px;
  }
 
 
+ .question-logo {
+    height: 200px;
+    margin-left: 180px;
+ }
 
 
 
