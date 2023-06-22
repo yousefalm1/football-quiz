@@ -39,14 +39,11 @@ body {
  }
 
 /* styling for the question logo */
- .question-logo {
-    max-width: 100%;
-    max-height: 100%;
- }
+
 
 /* stlying the options container */
 
-.options-container {
+.options-btn {
     display: grid;
     /* used help for this */
     grid-template-columns: repeat(2, 1fr);
