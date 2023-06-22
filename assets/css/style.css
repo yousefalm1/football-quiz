@@ -58,11 +58,16 @@ body {
 
 .btn {
     padding: 10px;
-    background-color: lightgrey;
+    background-color: lightskyblue;
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    color: white;
+    font-size: large;
+    font-weight: bold;
 }
+
+
 
 /* next questions btn */
 .next-container {
