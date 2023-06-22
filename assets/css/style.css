@@ -32,14 +32,36 @@ body {
  /* styling for where the question will go */
 
  .question-container {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
  }
 
-
+/* styling for the question logo */
  .question-logo {
     height: 200px;
     margin-left: 180px;
  }
+
+
+/* stlying the options container */
+
+.options-container {
+    display: grid;
+    /* used help for this */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* styling the buttons */
+
+.btn {
+    padding: 10px;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
 
 
 
