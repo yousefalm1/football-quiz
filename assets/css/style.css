@@ -73,5 +73,7 @@ body {
   }
   
   .next-container button {
-
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: none;
   }
