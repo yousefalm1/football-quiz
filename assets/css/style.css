@@ -44,7 +44,6 @@ body {
     max-height: 100%;
  }
 
-
 /* stlying the options container */
 
 .options-container {
@@ -52,6 +51,7 @@ body {
     /* used help for this */
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    margin-top:30px;
 }
 
 /* styling the buttons */
@@ -65,11 +65,13 @@ body {
 }
 
 /* next questions btn */
-
-.next-container button {
+.next-container {
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    height: 90px;
+  }
+  
+  .next-container button {
 
-
-
+  }
