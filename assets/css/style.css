@@ -1,10 +1,20 @@
+
+/* Remove defualt margins, padding and borders  */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
     font-family: ;
-    background-image: url(/assets/images/logo.png);
+    background-image: url(/assets/images/);
+}
+
+
+
+.logo {
+    height: 70px;
 }
