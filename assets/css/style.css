@@ -69,8 +69,17 @@ body {
 }
 
 .btn:hover {
-
     border-color:  black;
+}
+
+
+.btn.correct {
+    background-color: green;
+    color: black;
+}
+
+.btn.wrong {
+    background-color: red;
 }
 
 /* next questions btn */
