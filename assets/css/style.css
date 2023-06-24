@@ -10,7 +10,7 @@
 
 body {
     font-family: ;
-    background: lightcoral;
+    background: url(/assets/images/football\ pitch.jpeg);
 }
 
 .logo {
@@ -70,106 +70,25 @@ body {
     margin: 20px auto;
     border-radius: 15px;
     cursor: pointer;
-    /* display: none;  */
+    display: none; 
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Games Area Container */
-
-
- /* styling for where the question will go */
-
- /* .question-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
- } */
-
-/* styling for the question logo */
-
-
-/* stlying the options container */
-
-/* .options-btn {
-    display: grid;
-    used help for this */
-    /* grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top:30px; */
-/* } */
-
-/* styling the buttons */
-
-/* .btn {
-    padding: 10px;
-    background-color: #73A5C6;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-size: large;
-    font-weight: bold;
-    border: 1px solid #528AAE;
-
-}
-
-.btn:hover {
-    border-color:  black;
-}
-
-
-.btn.correct {
-    background-color: green;
-    color: black;
-}
-
-.btn.wrong {
-    background-color: red;
-} */
-
-/* next questions btn */
-/* .next-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-  }
   
-  .next-container button {
-    padding: 10px 40px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-  } */
 
-  /* score area container */
 
-  /* .score-area-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px; */
 
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
