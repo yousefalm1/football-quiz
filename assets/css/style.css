@@ -49,33 +49,15 @@ body {
     font-size: large;
     padding: 10px;
     margin: 10px 0 ;
-    border: 2px solid #528AAE;
+    border: none;
     font-weight: bold;
-  }
-  /* .btn {
-    background: #fff;
-    color: #222;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid #222;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
     transition: all 0.3s;
-
-}
-
-btn {
-  padding: 10px;
-  background-color: #73A5C6;
-  border-radius: 15px;
-  cursor: pointer;
-  color: white;
-  font-size: large;
-  font-weight: bold;
-  border: 1px solid #528AAE; */
+  }
+  
+  .btn:hover{
+    color: black;
+    border: none;
+  }
 
 
 
