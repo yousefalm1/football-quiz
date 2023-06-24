@@ -25,24 +25,57 @@ body {
   border-radius: 20px;
   padding: 30px;
   border: 2px solid black;
+}
 
+.questionAndBtn-container{
+  padding: 20px;
 }
 
 
-/* .quiz-area-container {
-    max-width: 600px;
-    padding: 20px;
-    background-color: grey;
-    border: 4px solid black;
-    border-radius: 20px;
-    margin: 0 auto;
-} */
+.options-btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top:30px
+  }
 
 
+  .btn{
+    background: #73A5C6;
+    color: #222;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    margin: 10px 0 ;
+    border: 2px solid #528AAE;
+    font-weight: bold;
+  }
+  /* .btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 
+}
 
-
-
+btn {
+  padding: 10px;
+  background-color: #73A5C6;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid #528AAE; */
 
 
 
