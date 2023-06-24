@@ -21,12 +21,30 @@ const questions = [
     }
 ]
 
+const questionDisplay = document.getElementById("question");
+const answerButtons = document.getElementById("options-btn");
+const nextButton = document.getElementsByClassName("next-btn");
 
-function nextQuestion() {
+function startQuiz() {
+
+}
+
+function showQuestion() {
+
+}
+
+function resetQuestion() {
 
 }
 
 function selectAnswer() {
-    
+
 }
 
+function showScoreFinish() {
+
+}
+
+function advanceToNextQuestion() {
+
+}
