@@ -29,6 +29,8 @@ body {
 
 .questionAndBtn-container{
   padding: 20px;
+  text-align: center;
+  
 }
 
 
@@ -58,6 +60,19 @@ body {
     color: black;
     border: none;
   }
+
+  .next-btn {
+    background-color: #001e4d;
+    color: white;
+    font: bold;
+    width: 100px;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 15px;
+    cursor: pointer;
+    /* display: none;  */
+  }
+
 
 
 
