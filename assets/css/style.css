@@ -10,50 +10,91 @@
 
 body {
     font-family: ;
-    background-image: url(/assets/images/);
+    background: lightcoral;
 }
- /* logo */
+
 .logo {
-    height: 70px;
+  height: 70px;
 }
 
-/* Games Area Container */
+.quiz-area-container{
+  width: 90%;
+  max-width: 600px;
+  background-color:  #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid black;
 
-.quiz-area-container {
+}
+
+
+/* .quiz-area-container {
     max-width: 600px;
     padding: 20px;
     background-color: grey;
     border: 4px solid black;
     border-radius: 20px;
     margin: 0 auto;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Games Area Container */
 
 
  /* styling for where the question will go */
 
- .question-container {
+ /* .question-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
- }
+ } */
 
 /* styling for the question logo */
 
 
 /* stlying the options container */
 
-.options-btn {
+/* .options-btn {
     display: grid;
-    /* used help for this */
-    grid-template-columns: repeat(2, 1fr);
+    used help for this */
+    /* grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top:30px;
-}
+    margin-top:30px; */
+/* } */
 
 /* styling the buttons */
 
-.btn {
+/* .btn {
     padding: 10px;
     background-color: #73A5C6;
     border-radius: 15px;
@@ -77,10 +118,10 @@ body {
 
 .btn.wrong {
     background-color: red;
-}
+} */
 
 /* next questions btn */
-.next-container {
+/* .next-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,30 +133,13 @@ body {
     border-radius: 15px;
     border: none;
     cursor: pointer;
-  }
+  } */
 
   /* score area container */
 
-  .score-area-container {
+  /* .score-area-container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin-top: 20px; */
 
-  }
-
-  /* scores */
-
-  .scores {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  /* score number */
-
-  #num-correct {
-    color: green;
-  }
-
-  #num-incorrect {
-    color: red;
   }
