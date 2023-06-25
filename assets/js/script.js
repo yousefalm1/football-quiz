@@ -79,8 +79,20 @@ function showQuestion() {
 function removeBasicButtons() {
 }
 
-function selectAnswer() {
 
+function selectAnswer(event) {
+    // the selected button is stored in the selectedBtn variable which is done by the event.target
+    const selectedBtn =  event.target;
+    // if the selectedbtn is true it means the selected answer is correct
+    const isCorrect = selectedBtn.dataset.correct === "true";
+
+    // If isCrrect is true it adds the "correct" CSS to the selected btn
+    if(isCorrect) {
+        selectedBtn.classList.add("correct");
+    // If  IsCorrect is false which means the selected answer was wrong iis add '"incorrect" css to the answer that was selected 
+    } else {
+        selectedBtn.classList.add("incorrect");
+    }
 }
 
 function showScoreFinish() {
