@@ -40,15 +40,21 @@ function startQuiz() {
     currentQuestionIndex = 0;
     // To make sure that the users score is zero in the start
     score = 0;
-    nextButton.innerHTML = "next"
+    // nextButton.innerHTML = "next"
+    // calls the show question function which will display the first question in the array
+    showQuestion()
 }
 
 function showQuestion() {
-
+    // removes the orginal buttons from the html and hides the next button
+   removeBasicButtons()
 }
 
-function resetQuestion() {
-
+function removeBasicButtons() {
+nextButton.style.diplay = "none"
+while(answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+}
 }
 
 function selectAnswer() {
