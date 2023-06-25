@@ -64,7 +64,15 @@ function showQuestion() {
         button.innerHTML = answer.text;
         // Add the class that is found in the css to the new buttons being created.
         button.classList.add("btn");
+        // displays the new buttons into the div where the buttons are located.
+        answerButtons.appendChild(button);
 
+        // if answer is "ture" then the button data set is set to "true"
+        if(answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        // when the user clicks one of the answer buttons it will call the select answer function
+         button.addEventListener("click", selectAnswer);
     })
 }
 
@@ -82,3 +90,5 @@ function showScoreFinish() {
 function advanceToNextQuestion() {
 
 }
+
+startQuiz()
