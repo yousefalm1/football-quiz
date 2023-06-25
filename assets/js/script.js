@@ -47,7 +47,7 @@ function startQuiz() {
 
 function showQuestion() {
     // removes the orginal buttons from the html and hides the next button
-   removeBasicButtons()
+   removeAnswerAndNext()
     // retrieves the current question from the questions array based on currentQuestionIndex
     let currentQuestion = questions[currentQuestionIndex];
     // Instead of it starting at 0 1 2 3 it starts at 1 2 3 4 (got this idea from ......)
@@ -76,7 +76,8 @@ function showQuestion() {
     })
 }
 
-function removeBasicButtons() {
+function removeAnswerAndNext() {
+  
 }
 
 
@@ -93,6 +94,18 @@ function selectAnswer(event) {
     } else {
         selectedBtn.classList.add("incorrect");
     }
+
+    // Converts the collection of child elements within the answerbutton into an array then iterates over each btn.
+    Array.from(answerButtons.children).forEach(button => {
+        // Inside the iteration, it checks if the correct data attribute of each button is equal to the string "true". 
+        // If it is, the CSS class "correct" is added to that button as well. This is done to highlight the correct answer(s) even after the user has made their selection.
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+    })
+
+    nextButton.style.display = "block";
+
 }
 
 function showScoreFinish() {
