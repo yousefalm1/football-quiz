@@ -48,13 +48,27 @@ function startQuiz() {
 function showQuestion() {
     // removes the orginal buttons from the html and hides the next button
    removeBasicButtons()
+    // retrieves the current question from the questions array based on currentQuestionIndex
+    let currentQuestion = questions[currentQuestionIndex];
+    // Instead of it starting at 0 1 2 3 it starts at 1 2 3 4 (got this idea from ......)
+    let questionNo = currentQuestionIndex + 1;
+    // updates the the questionDisplay by adding the question number a . and the question
+    questionDisplay.innerHTML = questionNo + ". " + currentQuestion.question
+    
+    // this iterates over each element in the currentQuestion.answers array using the foreach method.
+    // This will allow to prefrom a spcified operation for each element.
+    currentQuestion.answers.forEach(answer => {
+        // creates a new button for the each element that it iterates over
+        const button = document.createElement("button");
+        // each answer element is assigned the answer text
+        button.innerHTML = answer.text;
+        // Add the class that is found in the css to the new buttons being created.
+        button.classList.add("btn");
+
+    })
 }
 
 function removeBasicButtons() {
-nextButton.style.diplay = "none"
-while(answerButtons.firstChild) {
-    answerButtons.removeChild(answerButtons.firstChild);
-}
 }
 
 function selectAnswer() {
