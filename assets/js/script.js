@@ -100,9 +100,18 @@ function showScoreFinish() {
 }
 
 function advanceToNextQuestion() {
-
+    // this increments the currentQuestionIndex (which we declared) by 1 when moving to the next question in the questions array
+    currentQuestionIndex ++;
+    // this checks if there are more questions to dispaly this is done by compairng currentQuestionIndex with the length of the questions array
+    // if the currentQuestionIndex is less than the questions.length there are still more questions to show
+    if(currentQuestionIndex < questions.length) {
+        // if there are more questions to display the showQuestion fuction will be called to dispaly the next questoin using the updated currentQuestionIndex
+        showQuestion();
+        // if there are no more questions to display the showScoreFinish function is called to dispay how much the user got
+    } else {
+        showScoreFinish()
+    }
 }
 
-
-
+// To call the function
 startQuiz();
