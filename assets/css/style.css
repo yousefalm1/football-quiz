@@ -34,7 +34,7 @@ body {
 }
 
 
-.options-btn {
+#options-btn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -61,7 +61,7 @@ body {
     border: none;
   }
 
-  .next-btn {
+  #next-btn {
     background-color: #001e4d;
     color: white;
     font: bold;
