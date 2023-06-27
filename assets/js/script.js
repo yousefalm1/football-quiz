@@ -31,8 +31,6 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-
-
 function startQuiz() {
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
@@ -105,11 +103,17 @@ function selectAnswer(event) {
     nextButton.style.display = "block";
 }
 
-
+/**
+ * this function is to disply the final score and provide the user the option to play again
+ */
 function showScoreFinish() {
+    // the resetState function is called to clear the question display and answer buttons.
     resetState();
+    // updates question display with a message
     questionDisplay.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    // the innterHTML for next button is changed to play again
     nextButton.innerHTML = "Play Again";
+    // the next button style is  set to block to be visable
     nextButton.style.display  = "block";
 }
 
