@@ -7,7 +7,17 @@ const questions = [
             { text: 'Liverpool', correct: false },
             { text: 'Man City', correct: false }
         ]
+    },
+    {
+        question: 'who is the top goal scorer in the prem',
+        answers : [
+            {text: 'num1', correct: false},
+            {text: 'num2', correct: false},
+            {text: 'num3', correct: false},
+            {text: 'num4', correct: true},
+        ]
     }
+    
 ];
 
 // Declare and assigns variables
@@ -113,5 +123,13 @@ function advanceToNextQuestion() {
     }
 }
 
+
+nextButton.addEventListener("click", () =>{
+    if(currentQuestionIndex < questions.length) {
+        advanceToNextQuestion();
+    } else {
+        startQuiz();
+    }
+})
 // To call the function
 startQuiz();
