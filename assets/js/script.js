@@ -124,9 +124,16 @@ function advanceToNextQuestion() {
 }
 
 
+
+// the nextButton element has an evennt listener  attached to it with the click event
+// when the next button is clicked it will execute the arrow function 
 nextButton.addEventListener("click", () =>{
+    // insdie the arrow function the if statement this is to check if there a more questions to dispaly by comparing the currentQuestionIndex with the length of the questions array.
     if(currentQuestionIndex < questions.length) {
+        // if currentQuestionIndex is less than questions.length then that means there are more questions to display.
+        // so the advanceToNextQuestion function is called 
         advanceToNextQuestion();
+        // if not then the startQuiz function is called  
     } else {
         startQuiz();
     }
