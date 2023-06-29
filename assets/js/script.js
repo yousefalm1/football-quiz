@@ -45,27 +45,28 @@ function startQuiz() {
 
 
 function showQuestion() {
-    // removes the orginal buttons from the html and hides the next button
+    // calls resetState function which clears the state of the answer buttons and prepares the UI for displaying the current question.
     resetState();
-    // retrieves the current question from the questions array based on currentQuestionIndex
+    // retrieves the current question obejct from the questions array based on the currentQuestionIndex
+    // then assings the current Question object to the currentQuestion variable for easier access.
     const currentQuestion = questions[currentQuestionIndex];
+    // this sets the inner text of the questionDisplay element to the text of the current question, it updates the question UI to show the questioin
     questionDisplay.innerText = currentQuestion.question;
-    // this iterates over each element in the currentQuestion.answers array using the foreach method.
-    // This will allow to prefrom a spcified operation for each element.
+    // iterates over each answer in the answers array of the current question using forEach
     currentQuestion.answers.forEach(answer => {
-        // creates a new button for the each element that it iterates over
+        // inside the forEach it creates a new button element for each answer and assings the newly created buttons the "button" variable
         const button = document.createElement("button");
-        // each answer element is assigned the answer text
+        // sets the inner text property of the button to the text of the current answer
         button.innerText = answer.text;
-        // Add the class that is found in the css to the new buttons being created.
+        // adds the btn class to the new buttons
         button.classList.add("btn");
-        // displays the new buttons into the div where the buttons are located.
+        // adds the newly created button as a child elemnet to the answerButtons element (this would add the btn to the UI)
         answerButtons.appendChild(button);
-        // if answer is "ture" then the button data set is set to "true"
+        // this checks if the current answers is marked as correct (answer.correct) and if it is the "correctAnswer" is assigned the text of 'answer.text'
         if (answer.correct) {
             correctAnswer = answer.text;
         }
-        // when the user clicks one of the answer buttons it will call the select answer function
+        // Attached a click event listener to each button, and when the button is clicked the select answer function is called.
         button.addEventListener("click", selectAnswer);
     });
 }
@@ -79,15 +80,11 @@ function resetState() {
 
 
 function selectAnswer(event) {
-    // the selected button is stored in the selectedBtn variable which is done by the event.target
     const selectedBtn = event.target;
-    // if the selectedbtn is true it means the selected answer is correct
     const isCorrect = selectedBtn.innerText === correctAnswer;
-    // If isCrrect is true it adds the "correct" CSS to the selected btn
     if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
-        // If  IsCorrect is false which means the selected answer was wrong iis add '"incorrect" css to the answer that was selected 
     } else {
         selectedBtn.classList.add("incorrect");
     }
