@@ -1,3 +1,4 @@
+
 const questions = [
     {
         question: 'What team is the most popular team in the UK?',
@@ -24,6 +25,7 @@ const questions = [
 const questionDisplay = document.getElementById("question");
 const answerButtons = document.getElementById("options-btn");
 const nextButton = document.getElementById("next-btn");
+let correctAnswer;
 
 
 // Decalre and assign intial values to the variables.
@@ -31,23 +33,7 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-
-
-
-function shuffle(array) {
-    // Fisher-Yates shuffle algorithm
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-
-
-
 function startQuiz() {
-    const shuffledQuestions = shuffle(questions);
-
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
     // To make sure that the users score is zero in the start
@@ -77,7 +63,7 @@ function showQuestion() {
         answerButtons.appendChild(button);
         // if answer is "ture" then the button data set is set to "true"
         if (answer.correct) {
-            button.dataset.correct = answer.correct;
+            correctAnswer = answer.text;
         }
         // when the user clicks one of the answer buttons it will call the select answer function
         button.addEventListener("click", selectAnswer);
@@ -96,7 +82,7 @@ function selectAnswer(event) {
     // the selected button is stored in the selectedBtn variable which is done by the event.target
     const selectedBtn = event.target;
     // if the selectedbtn is true it means the selected answer is correct
-    const isCorrect = selectedBtn.dataset.correct === "true";
+    const isCorrect = selectedBtn.innerText === correctAnswer;
     // If isCrrect is true it adds the "correct" CSS to the selected btn
     if (isCorrect) {
         selectedBtn.classList.add("correct");
@@ -105,17 +91,10 @@ function selectAnswer(event) {
     } else {
         selectedBtn.classList.add("incorrect");
     }
-    // Converts the collection of child elements within the answerbutton into an array then iterates over each btn.
-    Array.from(answerButtons.children).forEach(button => {
-        // Inside the iteration, it checks if the correct data attribute of each button is equal to the string "true". 
-        // If it is, the CSS class "correct" is added to that button as well. This is done to highlight the correct answers even after the user has made their selection.
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
-        // After iterating through all the buttons, this line sets the disabled property of each button to true
-        // which means means the user will not be able to select another answer.
+    for (let button of answerButtons.children) {
         button.disabled = true;
-    });
+    }
+
     nextButton.style.display = "block";
 }
 
@@ -159,7 +138,5 @@ nextButton.addEventListener("click", () =>{
         startQuiz();
     }
 });
-
-
 // To call the function
 startQuiz();

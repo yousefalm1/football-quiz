@@ -9,8 +9,8 @@
 
 
 body {
-    font-family: ;
-    background: url(/assets/images/football\ pitch.jpeg);
+    /* font-family: ; */
+    background: url(../images/football-pitch.jpeg);
 }
 
 .logo {
@@ -58,6 +58,15 @@ body {
   }
   
   .btn:hover{
+    color: black;
+    border: none;
+  }
+
+  .btn:not([disabled]) {
+    cursor: pointer;
+  }
+
+  .btn:not([disabled]):hover {
     color: black;
     border: none;
   }
