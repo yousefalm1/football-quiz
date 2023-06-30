@@ -49,7 +49,8 @@ function shuffle(array) {
 
 
 function startQuiz() {
-    // Shuffle the questions array
+  // Shuffle the questions array
+
     const shuffledQuestions = shuffle(questions);
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
