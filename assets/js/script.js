@@ -80,18 +80,27 @@ function resetState() {
 
 
 function selectAnswer(event) {
+    // retrieves the button element that was the clicked and assigns the button element to the selectedBtn 
     const selectedBtn = event.target;
+    // compares the text of the selectedBtn.inner text with the correctAnswer 
     const isCorrect = selectedBtn.innerText === correctAnswer;
+    // checks if the selected answer is correct, if "isCorrect" is true means the selected answer is correct and the code inside the 'if' block excutes.
+    // if false the code inside else block excutes
     if (isCorrect) {
+        // inside the if block it adds the correct css class to the selected btn which adds css style to visually show that the selected answer is correct
         selectedBtn.classList.add("correct");
+        // this increments the score variable tracking the number of correct answers
         score++;
+        // Adds the incorrect Css class to the selected btn. this isi to visually indicate that the selected answer is incorrect. 
     } else {
         selectedBtn.classList.add("incorrect");
     }
+    // this loops iterates over each child button element of the answerButtons container; And sets the disabled property to each btn to true 
+    // (Which prevents the user from selecting another answer after making their choice.)
     for (let button of answerButtons.children) {
         button.disabled = true;
     }
-
+    // "Next" button is displayed in the UI after the user has selected an answer.
     nextButton.style.display = "block";
 }
 
