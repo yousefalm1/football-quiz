@@ -33,7 +33,24 @@ let correctAnswer;
 let currentQuestionIndex = 0;
 let score = 0;
 
+
+
+
+
+function shuffle(array) {
+    // Fisher-Yates shuffle algorithm
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+
+
 function startQuiz() {
+    // Shuffle the questions array
+    const shuffledQuestions = shuffle(questions);
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
     // To make sure that the users score is zero in the start
