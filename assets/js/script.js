@@ -21,6 +21,7 @@ const questions = [
     
 ];
 
+
 // Declare and assigns variables
 const questionDisplay = document.getElementById("question");
 const answerButtons = document.getElementById("options-btn");
@@ -48,7 +49,6 @@ function shuffle(array) {
 
 function startQuiz() {
   // Shuffle the questions array
-
     const shuffledQuestions = shuffle(questions);
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
@@ -57,6 +57,16 @@ function startQuiz() {
     nextButton.innerHTML = "Next"
     // calls the show question function which will display the first question in the array
     showQuestion();
+
+    var timer;
+    var ele = document.getElementById("timer");
+
+    let sec = 0;
+    timer = setInterval(() => {
+        ele.innerHTML = `00:${sec < 10 ? '0' + sec : sec}`;
+        sec++;
+    }, 1000);
+   
 }
 
 
