@@ -160,5 +160,6 @@ nextButton.addEventListener("click", () =>{
         startQuiz();
     }
 });
+
 // To call the function
 startQuiz();

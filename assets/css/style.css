@@ -139,3 +139,19 @@ text-align: center;
 .start-game-container button:hover {
   background-color: darkgreen;
 }
+
+/* game mode html */
+
+.pick-game-mdoe-container {
+width: 90%;
+max-width: 600px;
+background-color:  #fff;
+margin: 0 auto;
+border-radius: 20px;
+padding: 30px;
+border: 2px solid black;
+margin-top: 130px;
+height: 400px;
+text-align: center;
+}
+
