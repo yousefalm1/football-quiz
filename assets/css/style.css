@@ -133,5 +133,9 @@ text-align: center;
   cursor: pointer;
   color: white;
   background-color: #4CAF50;
+  transition: background-color 0.3s;
+}
 
+.start-game-container button:hover {
+  background-color: darkgreen;
 }
