@@ -106,29 +106,19 @@ padding: 30px;
 border: 2px solid black;
 margin-top: 130px;
 height: 400px;
+text-align: center;
 }
 
 .start-game-container h1 {
-  text-align: center;
-  margin-bottom: 50px;
+  font-size: 36px;
+  margin-top: 100px;
 }
-
 .start-game-container p {
-  text-align: center;
-  margin-bottom: 50px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-
-
-#start-game-btn {
-  background: #73A5C6;
-    color: #222;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-size: large;
-    padding: 10px;
-    margin: 10px 0 ;
-    border: none;
-    font-weight: bold;
+.start-game-container a {
+  text-decoration: none;
 }
+
