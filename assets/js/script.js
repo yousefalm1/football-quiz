@@ -28,38 +28,59 @@ const answerButtons = document.getElementById("options-btn");
 const nextButton = document.getElementById("next-btn");
 let correctAnswer;
 
-
-const startingMinutes = 10;
-let time = startingMinutes * 60;
-
-const countdownEl = document.getElementById('countdown');
-
-setInterval(startTimer, 1000);
-
-function startTimer() {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-  
-  countdownEl.innerHTML = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-  
-  if (time > 0) {
-    time--;
-  } else {
-    stopTimer();
-  }
-}
-
-function stopTimer() {
-  clearInterval(timerInterval);
-  countdownEl.innerHTML = "Time's up!";
-}
-
 // Decalre and assign intial values to the variables.
 // These Two variables will be used to keep track of the current question and the score. 
 let currentQuestionIndex = 0;
 let score = 0;
 
+let timerInterval;
 
+
+
+// used https://www.youtube.com/watch?v=x7WJEmxNlEs to help
+// TIMER
+
+// set the starting minutes to 2
+const startingMinutes = 2;
+// convert the starting minutes to seconds
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('countdown');
+// this calls the startTimer function every second
+
+setInterval(startTimer, 1000);
+
+/**
+ * starts the timer, this functin will be called in the startQuiz function
+ */
+function startTimer() {
+    // Calculate the minutes and seconds remaining
+
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    // display the countdown in the HTML Element
+
+    // the seconds part checks if the value of 'seconds' is less than 10, and if it is then it adds a leading zero to the value 
+    // if seconds is not less than 10, it will use the the orgianl value of 'seconds'
+    countdownEl.innerHTML = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+    // if the time variable (which represents the remaining time in seconds) is greater than 0, it will decrement it by 1.
+    // if the time reaches 0 the stopTimer function will be called to stop the timer.
+    if (time > 0) {
+        time--;
+    } else {
+        stopTimer();
+    }
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    countdownEl.innerHTML = "Time's up!";
+    showScoreFinish();
+}
+
+timerInterval = setInterval(startTimer, 1000);
 
 function shuffle(array) {
     // Fisher-Yates shuffle algorithm
@@ -69,9 +90,6 @@ function shuffle(array) {
     }
     return array;
 }
-
-
-
 
 function startQuiz() {
     // Shuffle the questions array
@@ -159,7 +177,8 @@ function showScoreFinish() {
     nextButton.innerHTML = "Play Again";
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
-    stopTimer();
+    document.getElementById("countdown") = removeChild
+    
 }
 
 function advanceToNextQuestion() {
@@ -172,7 +191,8 @@ function advanceToNextQuestion() {
         showQuestion();
         // if there are no more questions to display the showScoreFinish function is called to dispay how much the user got
     } else {
-        showScoreFinish()
+        showScoreFinish();
+        stopTimer();
     }
 }
 // the nextButton element has an event listener  attached to it with the click event
