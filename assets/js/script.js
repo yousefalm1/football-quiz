@@ -27,6 +27,7 @@ const questionDisplay = document.getElementById("question");
 const answerButtons = document.getElementById("options-btn");
 const nextButton = document.getElementById("next-btn");
 let correctAnswer;
+let timerInterval;
 
 
 // Decalre and assign intial values to the variables.
@@ -46,6 +47,23 @@ function shuffle(array) {
   }
 
 
+function startTimer(){
+    const ele = document.getElementById("timer");
+  let sec = 0;
+  ele.innerHTML = "00:00"; 
+  timerInterval = setInterval(() => {
+    ele.innerHTML = `00:${sec < 10 ? '0' + sec : sec}`; // Update timer display
+    sec++;
+  }, 1000);
+}
+
+
+function stopTimer () {
+    clearInterval(timerInterval); // Clear the timer interval
+    const ele = document.getElementById("timer");
+    ele.remove(); // Remove the timer element from the DOM
+}
+
 
 function startQuiz() {
   // Shuffle the questions array
@@ -57,16 +75,7 @@ function startQuiz() {
     nextButton.innerHTML = "Next"
     // calls the show question function which will display the first question in the array
     showQuestion();
-
-    var timer;
-    var ele = document.getElementById("timer");
-
-    let sec = 0;
-    timer = setInterval(() => {
-        ele.innerHTML = `00:${sec < 10 ? '0' + sec : sec}`;
-        sec++;
-    }, 1000);
-   
+    startTimer();
 }
 
 
@@ -142,6 +151,7 @@ function showScoreFinish() {
     nextButton.innerHTML = "Play Again";
     // the next button style is  set to block to be visable
     nextButton.style.display  = "block";
+    stopTimer();
 }
 
 function advanceToNextQuestion() {
