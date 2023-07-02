@@ -158,14 +158,8 @@ text-align: center;
 
 /* timer */
 
-#js_timer {
-  text-align: center;
-}
-
-#timer {
-  background: #fff;
-  color: #000;
-  width: 100px;
-  margin: 0 auto;
-  border: solid black;
+#countdown p {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
 }

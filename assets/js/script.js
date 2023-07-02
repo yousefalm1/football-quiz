@@ -11,14 +11,14 @@ const questions = [
     },
     {
         question: 'who is the top goal scorer in the prem',
-        answers : [
-            {text: 'num1', correct: false},
-            {text: 'num2', correct: false},
-            {text: 'num3', correct: false},
-            {text: 'num4', correct: true},
+        answers: [
+            { text: 'num1', correct: false },
+            { text: 'num2', correct: false },
+            { text: 'num3', correct: false },
+            { text: 'num4', correct: true },
         ]
     }
-    
+
 ];
 
 
@@ -27,8 +27,32 @@ const questionDisplay = document.getElementById("question");
 const answerButtons = document.getElementById("options-btn");
 const nextButton = document.getElementById("next-btn");
 let correctAnswer;
-let timerInterval;
 
+
+const startingMinutes = 10;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('countdown');
+
+setInterval(startTimer, 1000);
+
+function startTimer() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  
+  countdownEl.innerHTML = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+  
+  if (time > 0) {
+    time--;
+  } else {
+    stopTimer();
+  }
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  countdownEl.innerHTML = "Time's up!";
+}
 
 // Decalre and assign intial values to the variables.
 // These Two variables will be used to keep track of the current question and the score. 
@@ -40,33 +64,17 @@ let score = 0;
 function shuffle(array) {
     // Fisher-Yates shuffle algorithm
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-  }
-
-
-function startTimer(){
-    const ele = document.getElementById("timer");
-  let sec = 0;
-  ele.innerHTML = "00:00"; 
-  timerInterval = setInterval(() => {
-    ele.innerHTML = `00:${sec < 10 ? '0' + sec : sec}`; // Update timer display
-    sec++;
-  }, 1000);
 }
 
 
-function stopTimer () {
-    clearInterval(timerInterval); // Clear the timer interval
-    const ele = document.getElementById("timer");
-    ele.remove(); // Remove the timer element from the DOM
-}
 
 
 function startQuiz() {
-  // Shuffle the questions array
+    // Shuffle the questions array
     const shuffledQuestions = shuffle(questions);
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
@@ -150,16 +158,16 @@ function showScoreFinish() {
     // the innterHTML for next button is changed to play again
     nextButton.innerHTML = "Play Again";
     // the next button style is  set to block to be visable
-    nextButton.style.display  = "block";
+    nextButton.style.display = "block";
     stopTimer();
 }
 
 function advanceToNextQuestion() {
     // this increments the currentQuestionIndex (which we declared) by 1 when moving to the next question in the questions array
-    currentQuestionIndex ++;
+    currentQuestionIndex++;
     // this checks if there are more questions to dispaly this is done by compairng currentQuestionIndex with the length of the questions array
     // if the currentQuestionIndex is less than the questions.length there are still more questions to show
-    if(currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < questions.length) {
         // if there are more questions to display the showQuestion fuction will be called to dispaly the next questoin using the updated currentQuestionIndex
         showQuestion();
         // if there are no more questions to display the showScoreFinish function is called to dispay how much the user got
@@ -169,9 +177,9 @@ function advanceToNextQuestion() {
 }
 // the nextButton element has an event listener  attached to it with the click event
 // when the next button is clicked it will execute the arrow function 
-nextButton.addEventListener("click", () =>{
+nextButton.addEventListener("click", () => {
     // insdie the arrow function the if statement this is to check if there a more questions to dispaly by comparing the currentQuestionIndex with the length of the questions array.
-    if(currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < questions.length) {
         // if currentQuestionIndex is less than questions.length then that means there are more questions to display.
         // so the advanceToNextQuestion function is called 
         advanceToNextQuestion();
