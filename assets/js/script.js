@@ -177,7 +177,9 @@ function showScoreFinish() {
     nextButton.innerHTML = "Play Again";
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
-    document.getElementById("countdown") = removeChild
+    
+
+    countdownEl.style.display = "none";
     
 }
 
