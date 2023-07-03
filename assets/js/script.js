@@ -33,17 +33,21 @@ let correctAnswer;
 let currentQuestionIndex = 0;
 let score = 0;
 
-let timerInterval;
 
 
 
 // used https://www.youtube.com/watch?v=x7WJEmxNlEs to help
 // TIMER
 
+
+
+
+
 // set the starting minutes to 2
 const startingMinutes = 2;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
+let timerInterval;
 
 const countdownEl = document.getElementById('countdown');
 // this calls the startTimer function every second
@@ -80,7 +84,18 @@ function stopTimer() {
     showScoreFinish();
 }
 
-timerInterval = setInterval(startTimer, 1000);
+
+
+function resetTimer() {
+    time = startingMinutes * 60;
+    countdownEl.innerHTML = `${startingMinutes}:00`;
+}
+
+
+
+
+
+
 
 function shuffle(array) {
     // Fisher-Yates shuffle algorithm
@@ -178,6 +193,8 @@ function showScoreFinish() {
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
+
+     // Clear the existing interval
 }
 
 function advanceToNextQuestion() {
@@ -194,6 +211,8 @@ function advanceToNextQuestion() {
         stopTimer();
     }
 }
+
+
 // the nextButton element has an event listener  attached to it with the click event
 // when the next button is clicked it will execute the arrow function 
 nextButton.addEventListener("click", () => {
@@ -205,6 +224,8 @@ nextButton.addEventListener("click", () => {
         // if not then the startQuiz function is called which restarts the quiz
     } else {
         startQuiz();
+        countdownEl.style.display = "block";
+        resetTimer();
     }
 });
 
