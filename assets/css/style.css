@@ -72,7 +72,7 @@ body {
   }
 
   #next-btn {
-    background-color: #001e4d;
+    background-color: #4CAF50;
     color: white;
     font: bold;
     width: 100px;
@@ -81,6 +81,11 @@ body {
     border-radius: 15px;
     cursor: pointer;
     display: none; 
+    border: none;
+  }
+
+  #next-btn:hover {
+    background-color: green;
   }
 
 
@@ -184,7 +189,26 @@ border-radius: 20px;
 padding: 30px;
 border: 2px solid black;
 margin-top: 130px;
-height: 400px;
+height: 440px;
 text-align: center;
 }
 
+.how-to-play button {
+  display: block;
+  margin: 10px auto;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #4CAF50;
+  transition: background-color 0.3s;
+}
+.how-to-play button:hover {
+  background-color: darkgreen;
+}
+
+.how-to-play a {
+  text-decoration: none;
+}

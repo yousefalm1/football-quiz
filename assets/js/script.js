@@ -77,23 +77,16 @@ function startTimer() {
         stopTimer();
     }
 }
-
 function stopTimer() {
     clearInterval(timerInterval);
     countdownEl.innerHTML = "Time's up!";
     showScoreFinish();
 }
 
-
-
 function resetTimer() {
     time = startingMinutes * 60;
     countdownEl.innerHTML = `${startingMinutes}:00`;
 }
-
-
-
-
 
 
 
@@ -193,9 +186,8 @@ function showScoreFinish() {
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
-
-     // Clear the existing interval
 }
+
 
 function advanceToNextQuestion() {
     // this increments the currentQuestionIndex (which we declared) by 1 when moving to the next question in the questions array
