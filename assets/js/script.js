@@ -44,7 +44,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = 2;
+const startingMinutes = .30;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -86,7 +86,9 @@ function stopTimer() {
 function resetTimer() {
     time = startingMinutes * 60;
     countdownEl.innerHTML = `${startingMinutes}:00`;
+
 }
+
 
 
 
@@ -220,6 +222,5 @@ nextButton.addEventListener("click", () => {
         resetTimer();
     }
 });
-
 // To call the function
 startQuiz();
