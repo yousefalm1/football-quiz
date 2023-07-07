@@ -179,7 +179,10 @@ function showScoreFinish() {
     // updates question display with a message
     questionDisplay.innerHTML = `You scored ${score} out of ${questions.length}!`;
     // the innterHTML for next button is changed to play again
-    nextButton.innerHTML = "Play Again";
+    nextButton.innerHTML = "Go Back Home";
+    nextButton.addEventListener("click", () => {
+        window.location.href = "/home-page.html"; // Redirect to the home page
+    });
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
@@ -221,12 +224,11 @@ nextButton.addEventListener("click", () => {
 startQuiz();
 
 
-
 const easyBtn =  document.getElementById('easy');
 const answerBtn = document.getElementsByClassName('btn')
 
 easyBtn.addEventListener("click", function(e) {
-    countdownEl.style.display = "block";
+    countdownEl.style.display = "none";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
@@ -239,6 +241,7 @@ const optionsBtn = document.getElementById('options-btn');
 
 startGameBtn.addEventListener('click', function(e) {
     countdownEl.style.display = "none"
+    
 });
 
-// To call the function
+//  dont forget to make play again btn go to the btns
