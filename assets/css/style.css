@@ -229,3 +229,6 @@ text-align: center;
     border: none;
     font-weight: bold;
 }
+.game-mode-btns:hover {
+  background-color: green;
+}
