@@ -218,6 +218,14 @@ text-align: center;
 
 
 .game-mode-btns {
-  color: red;
-  
+  background: darkgreen;
+    color: #222;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    margin: 10px 0 ;
+    border: none;
+    font-weight: bold;
 }
