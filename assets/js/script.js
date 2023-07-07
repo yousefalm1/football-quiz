@@ -40,9 +40,6 @@ let score = 0;
 // TIMER
 
 
-
-
-
 // set the starting minutes to 2
 const startingMinutes = .30;
 // convert the starting minutes to seconds
@@ -88,9 +85,6 @@ function resetTimer() {
     countdownEl.innerHTML = `${startingMinutes}:00`;
 
 }
-
-
-
 
 function shuffle(array) {
     // Fisher-Yates shuffle algorithm
@@ -206,7 +200,6 @@ function advanceToNextQuestion() {
     }
 }
 
-
 // the nextButton element has an event listener  attached to it with the click event
 // when the next button is clicked it will execute the arrow function 
 nextButton.addEventListener("click", () => {
@@ -222,5 +215,11 @@ nextButton.addEventListener("click", () => {
         resetTimer();
     }
 });
+
+const easy =  document.getElementById('easy')
+
+easy.addEventListener("click", function(e) {
+    countdownEl.style.display = "none"
+})
 // To call the function
 startQuiz();
