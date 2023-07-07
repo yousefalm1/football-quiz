@@ -183,6 +183,8 @@ function showScoreFinish() {
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
+    questionDisplay.style.display = "block"
+    easyBtn.style.display = "none"
 }
 
 
@@ -221,19 +223,22 @@ startQuiz();
 
 
 const easyBtn =  document.getElementById('easy');
+const answerBtn = document.getElementsByClassName('btn')
 
 easyBtn.addEventListener("click", function(e) {
-    countdownEl.style.display = "none";
+    countdownEl.style.display = "block";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
+    optionsBtn.style.display = "grid"
+  
 });
 
 const startGameBtn = document.getElementById('start-game-btn');
 const optionsBtn = document.getElementById('options-btn');
 
+
 startGameBtn.addEventListener('click', () => {
-    questionDisplay.remove()
-    optionsBtn.style.display = 'none'; // Hide the answer buttons
+    countdownEl.style.display = "none"
 });
 
 // To call the function
