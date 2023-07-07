@@ -216,10 +216,13 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-const easy =  document.getElementById('easy')
-
+const easyBtn =  document.getElementById('easy')
 easy.addEventListener("click", function(e) {
-    countdownEl.style.display = "none"
+    countdownEl.style.display = "none";
+    easyBtn.style.display = "none";
 })
+
+
+
 // To call the function
 startQuiz();
