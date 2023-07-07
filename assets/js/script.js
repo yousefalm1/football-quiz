@@ -232,6 +232,18 @@ easyBtn.addEventListener("click", function(e) {
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
+    hardBtn.style.display = "none"
+  
+});
+
+const hardBtn = document.getElementById('hard');
+
+hardBtn.addEventListener("click", function(e) {
+    countdownEl.style.display = "block";
+    easyBtn.style.display = "none";
+    questionDisplay.style.display = "block"; // Display the question
+    optionsBtn.style.display = "grid"
+    hardBtn.style.display = "none";
   
 });
 
@@ -244,4 +256,3 @@ startGameBtn.addEventListener('click', function(e) {
     
 });
 
-//  dont forget to make play again btn go to the btns
