@@ -24,6 +24,7 @@ const questions = [
 
 // Declare and assigns variables
 const questionDisplay = document.getElementById("question");
+
 const answerButtons = document.getElementById("options-btn");
 const nextButton = document.getElementById("next-btn");
 let correctAnswer;
@@ -41,7 +42,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = .30;
+const startingMinutes = 2;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -215,14 +216,24 @@ nextButton.addEventListener("click", () => {
         resetTimer();
     }
 });
+startQuiz();
 
-const easyBtn =  document.getElementById('easy')
-easy.addEventListener("click", function(e) {
+
+
+const easyBtn =  document.getElementById('easy');
+
+easyBtn.addEventListener("click", function(e) {
     countdownEl.style.display = "none";
     easyBtn.style.display = "none";
-})
+    questionDisplay.style.display = "block"; // Display the question
+});
 
+const startGameBtn = document.getElementById('start-game-btn');
+const optionsBtn = document.getElementById('options-btn');
 
+startGameBtn.addEventListener('click', () => {
+    questionDisplay.remove()
+    optionsBtn.style.display = 'none'; // Hide the answer buttons
+});
 
 // To call the function
-startQuiz();

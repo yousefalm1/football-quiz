@@ -55,6 +55,7 @@ body {
     border: none;
     font-weight: bold;
     transition: all 0.3s;
+    display: block;
   }
   
 
@@ -97,7 +98,9 @@ body {
   background: #ff9393;
 }
 
-
+#question {
+  display: none;
+}
 
 /* home page css */
 
