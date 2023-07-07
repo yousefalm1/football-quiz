@@ -237,7 +237,7 @@ const startGameBtn = document.getElementById('start-game-btn');
 const optionsBtn = document.getElementById('options-btn');
 
 
-startGameBtn.addEventListener('click', () => {
+startGameBtn.addEventListener('click', function(e) {
     countdownEl.style.display = "none"
 });
 
