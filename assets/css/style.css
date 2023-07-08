@@ -219,22 +219,32 @@ text-align: center;
 
 
 .game-mode-btns {
-  background: #4CAF50;
-    color: #222;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-size: large;
-    padding: 10px;
-    margin: 10px 0 ;
-    border: none;
-    font-weight: bold;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
 }
+
 .game-mode-btns:hover {
-  background-color: darkgreen;
+  background-color: #45a049;
+}
+
+.game-mode-btns:focus {
+  outline: none;
+}
+
+.game-mode-btns:active {
+  background-color: #3e8948;
 }
 
 
 .mode-con {
   padding: 117.5px;
+
 }

@@ -10,14 +10,176 @@ const questions = [
         ]
     },
     {
-        question: 'who is the top goal scorer in the prem',
+        question: 'Who won the FIFA World Cup in 2018?',
         answers: [
-            { text: 'num1', correct: false },
-            { text: 'num2', correct: false },
-            { text: 'num3', correct: false },
-            { text: 'num4', correct: true },
+            { text: 'France', correct: true },
+            { text: 'Brazil', correct: false },
+            { text: 'Brazil', correct: false },
+            { text: 'Argentina', correct: false },
         ]
-    }
+    },
+    {
+        question: 'Which player has won the most Ballon D`Or awards?',
+        answers: [
+            { text: 'Lionel Messi',correct: true },
+            { text: 'Cristiano Ronaldo', correct: false },
+            { text: 'Diego Maradona', correct: false },
+            { text: 'Pelé', correct: false },
+        ]
+    },
+    {
+        question: 'Which team has won the UEFA Champions League the most times?',
+        answers: [
+            { text: 'Liverpool', correct: false },
+            { text: 'Barcelona', correct: false },
+            { text: 'Real Madrid', correct: true },
+            { text: 'Bayern Munich', correct: false },
+        ]
+    },
+    {
+        question: 'Who is the all-time leading goal scorer in the English Premier League?',
+        answers: [
+            { text: 'Wayne Rooney', correct: false },
+            { text: 'Thierry Henry', correct: false },
+            { text: 'Sergio Agüero', correct: false },
+            { text: 'Alan Shearer', correct: true },
+        ]
+    },
+    {
+        question: 'Which player has the record for the most goals scored in a single FIFA World Cup tournament?',
+        answers: [
+            { text: 'Gerd Müller', correct: true },
+            { text: 'Just Fontaine', correct: false },
+            { text: 'Ronaldo', correct: false },
+            { text: 'Miroslav Klose', correct: false },
+        ]
+    },
+    {
+        question: 'Which country has won the most Copa America titles?',
+        answers: [
+            { text: 'Uruguay', correct: false },
+            { text: 'Argentina', correct: false },
+            { text: 'Brazil', correct: true },
+            { text: 'Chile', correct: false },
+        ]
+    },
+    {
+        question: 'Which club has won the most English Premier League titles?',
+        answers: [
+            { text: 'Manchester United', correct: true },
+            { text: 'Liverpool', correct: false },
+            { text: 'Arsenal', correct: false },
+            { text: 'Chelsea', correct: false },
+        ]
+    },
+    {
+        question: 'Which player has won the most European Golden Shoe awards?',
+        answers: [
+            { text: 'Luis Suárez', correct: false },
+            { text: 'Lionel Messi ', correct: true },
+            { text: 'Cristiano Ronaldo', correct: false },
+            { text: 'Thierry Henry', correct: false },
+        ]
+    },
+    {
+        question: 'Which country hosted the 2014 FIFA World Cup?',
+        answers: [
+            { text: 'Germany', correct: false },
+            { text: 'Russia', correct: false },
+            { text: 'Argentina', correct: false },
+            { text: 'Brazil', correct: true },
+        ]
+    },
+    {
+        question: 'Who is the manager of the Manchester City football club?',
+        answers: [
+            { text: 'Mikel Arteta', correct: false },
+            { text: 'Jose Mourinho', correct: false },
+            { text: 'Pep Guardiola', correct: true},
+            { text: 'Jurgen Klopp', correct: false },
+        ]
+    },
+    {
+        question: 'Which player has the record for the most appearances in the UEFA Champions League?',
+        answers: [
+            { text: 'Ryan Giggs', correct: false },
+            { text: 'Iker Casillas', correct: true },
+            { text: 'Cristiano Ronaldo', correct: false },
+            { text: 'Xavi Hernandez', correct: false },
+        ]
+    },
+    {
+        question: 'Which country won the UEFA Euro 2020 tournament?',
+        answers: [
+            { text: 'Spain', correct: false },
+            { text: 'Belgium', correct: false },
+            { text: 'England', correct: false },
+            { text: 'Italy', correct: true },
+        ]
+    },
+    {
+        question: 'Who is the current manager of the Barcelona football club?',
+        answers: [
+            { text: 'Ronald Koeman', correct: false },
+            { text: 'Pep Guardiola', correct: false },
+            { text: 'Diego Simeone', correct: false },
+            { text: 'Xavi Hernandez', correct: true },
+        ]
+    },
+    {
+        question: 'Which player has scored the most goals in a single season of the Bundesliga?',
+        answers: [
+            { text: 'Robert Lewandowski', correct: true },
+            { text: 'Gerd Muller', correct: false },
+            { text: 'Pierre-Emerick Aubameyang', correct: false },
+            { text: 'Claudio Pizarro', correct: false },
+        ]
+    },
+    {
+        question: 'Who is the current captain of the Liverpool football club?',
+        answers: [
+            { text: 'Darwin Nunez', correct: false },
+            { text: 'Jordan Henderson', correct: true },
+            { text: 'Mohamed Salah', correct: false },
+            { text: 'Virgil van Dijk', correct: false },
+        ]
+    },
+    {
+        question: 'Which club has won the most Serie A titles in the history of Italian football?',
+        answers: [
+            { text: 'Inter Milan', correct: false },
+            { text: 'Roma', correct: false },
+            { text: 'Juventus', correct: true },
+            { text: 'AC Milan', correct: false },
+        ]
+    },
+    {
+        question: 'Who is the all-time leading goal scorer for the Spanish national team?',
+        answers: [
+            { text: 'David Villa', correct: true },
+            { text: 'Raul', correct: false },
+            { text: 'Fernando Torres', correct: false },
+            { text: 'David Silva', correct: false },
+        ]
+    },
+    {
+        question: 'Which club has won the most FA Cup titles in England?',
+        answers: [
+            { text: 'Liverpool', correct: false },
+            { text: 'Chelsea', correct: false },
+            { text: 'Manchester United', correct: false },
+            { text: 'Arsenal', correct: true },
+        ]
+    },
+    {
+        question: 'Who is the current top scorer in the English Premier League for the 2021-2022 season?',
+        answers: [
+            { text: 'Bruno Fernandes', correct: false },
+            { text: 'Mohamed Salah', correct: true },
+            { text: 'Harry Kane', correct: false },
+            { text: 'Son Heung-min', correct: false },
+        ]
+    },
 
 ];
 
@@ -37,7 +199,6 @@ let score = 0;
 
 
 
-// used https://www.youtube.com/watch?v=x7WJEmxNlEs to help
 // TIMER
 
 
@@ -257,13 +418,12 @@ const startGameBtn = document.getElementById('start-game-btn');
 const optionsBtn = document.getElementById('options-btn');
 
 
-startGameBtn.addEventListener('click', function(e) {
-    countdownEl.style.display = "none"
-    
-});
+
 
 
 
 // bugs i fixed
 // make it that the timer only starts when you click the game modes on hard mode 
 // the timer on the easy game mode still works but dosent show so it redirects you the show score screen same as hard mode
+// added a [0] to the const container = document.getElementsByClassName('mode-con')[0] this make the class i added to the game mode btns to go away when i click either mode btns
+// used https://www.youtube.com/watch?v=x7WJEmxNlEs to help
