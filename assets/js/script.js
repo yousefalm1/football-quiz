@@ -50,7 +50,7 @@ let timerInterval;
 const countdownEl = document.getElementById('countdown');
 // this calls the startTimer function every second
 
-setInterval(startTimer, 1000);
+// setInterval(startTimer, 1000);
 
 /**
  * starts the timer, this functin will be called in the startQuiz function
@@ -227,24 +227,29 @@ startQuiz();
 
 const easyBtn =  document.getElementById('easy');
 const answerBtn = document.getElementsByClassName('btn')
+const container = document.getElementsByClassName('mode-con')[0]
 
 easyBtn.addEventListener("click", function(e) {
+    container.classList.remove("mode-con");  
     countdownEl.style.display = "none";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
     hardBtn.style.display = "none"
-  
+    modeCon.style.display="none"  
 });
 
 const hardBtn = document.getElementById('hard');
 
 hardBtn.addEventListener("click", function(e) {
+    container.classList.remove("mode-con");  
     countdownEl.style.display = "block";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
     hardBtn.style.display = "none";
+    setInterval(startTimer, 1000);
+
   
 });
 
@@ -257,3 +262,8 @@ startGameBtn.addEventListener('click', function(e) {
     
 });
 
+
+
+// bugs i fixed
+// make it that the timer only starts when you click the game modes on hard mode 
+// the timer on the easy game mode still works but dosent show so it redirects you the show score screen same as hard mode
