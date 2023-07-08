@@ -42,7 +42,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = 2;
+const startingMinutes = 0.1;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -188,6 +188,7 @@ function showScoreFinish() {
     countdownEl.style.display = "none";
     questionDisplay.style.display = "block"
     easyBtn.style.display = "none"
+    hardBtn.style.display = "none"
 }
 
 
