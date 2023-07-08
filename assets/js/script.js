@@ -203,7 +203,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = 0.1;
+const startingMinutes = 2;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -370,7 +370,7 @@ function advanceToNextQuestion() {
 
 // the nextButton element has an event listener  attached to it with the click event
 // when the next button is clicked it will execute the arrow function 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click",() => {
     // insdie the arrow function the if statement this is to check if there a more questions to dispaly by comparing the currentQuestionIndex with the length of the questions array.
     if (currentQuestionIndex < questions.length) {
         // if currentQuestionIndex is less than questions.length then that means there are more questions to display.
@@ -389,6 +389,8 @@ startQuiz();
 const easyBtn =  document.getElementById('easy');
 const answerBtn = document.getElementsByClassName('btn')
 const container = document.getElementsByClassName('mode-con')[0]
+const startGameBtn = document.getElementById('start-game-btn');
+const optionsBtn = document.getElementById('options-btn');
 
 easyBtn.addEventListener("click", function(e) {
     container.classList.remove("mode-con");  
@@ -397,7 +399,6 @@ easyBtn.addEventListener("click", function(e) {
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
     hardBtn.style.display = "none"
-    modeCon.style.display="none"  
 });
 
 const hardBtn = document.getElementById('hard');
@@ -414,8 +415,7 @@ hardBtn.addEventListener("click", function(e) {
   
 });
 
-const startGameBtn = document.getElementById('start-game-btn');
-const optionsBtn = document.getElementById('options-btn');
+
 
 
 

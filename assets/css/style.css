@@ -12,6 +12,7 @@ body {
     /* font-family: ; */
     background: url(../images/football-pitch.jpeg);
     background-size: cover;
+  
 }
 
 .logo {
@@ -45,7 +46,7 @@ body {
 
 
   .btn{
-    background: darkgreen;
+    background: #4CAF50;
     color: #222;
     border-radius: 15px;
     cursor: pointer;
