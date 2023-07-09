@@ -189,6 +189,14 @@ text-align: center;
 /* how to play */
 
 
+.how-to-play h1 {
+  padding-bottom: 14px;
+}
+.how-to-play p {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+ 
 .how-to-play {
   width: 90%;
 max-width: 600px;
@@ -200,19 +208,25 @@ border: 2px solid black;
 margin-top: 130px;
 height: 440px;
 text-align: center;
+font-size: 15px;
+position: relative;
 }
 
 .how-to-play button {
   display: block;
-  margin: 10px auto;
+  margin: 26px auto;
   font-size: 15px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   color: white;
   background-color: #4CAF50;
   transition: background-color 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .how-to-play button:hover {
   background-color: darkgreen;
@@ -256,4 +270,12 @@ text-align: center;
 
 
 /* Media Queries */
+
+/* How to play media queries */
+
+@media screen and (max-width: 660px) {
+  
+  
+}
+
 

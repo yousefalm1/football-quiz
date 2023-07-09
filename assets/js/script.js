@@ -342,7 +342,7 @@ function showScoreFinish() {
     // the innterHTML for next button is changed to play again
     nextButton.innerHTML = "Go Back Home";
     nextButton.addEventListener("click", () => {
-        window.location.href = "./index.html"; // Redirect to the home page
+        window.location.href = "index.html"; // Redirect to the home page
     });
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
