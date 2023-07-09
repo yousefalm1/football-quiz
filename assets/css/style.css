@@ -1,10 +1,9 @@
-
 /* Remove defualt margins, padding and borders  */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -17,16 +16,16 @@ body {
   background-position: center;
   height: 100vh;
   width: 100vw;
-  }
+}
 
 .logo {
   height: 70px;
 }
 
-.quiz-area-container{
+.quiz-area-container {
   width: 90%;
   max-width: 600px;
-  background-color:  #fff;
+  background-color: #fff;
   margin: 0 auto;
   border-radius: 20px;
   padding: 30px;
@@ -34,10 +33,10 @@ body {
   margin-top: 130px;
 }
 
-.questionAndBtn-container{
+.questionAndBtn-container {
   padding: 20px;
   text-align: center;
-  
+
 }
 
 
@@ -45,54 +44,54 @@ body {
   display: none;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-top:30px;
-  }
+  margin-top: 30px;
+}
 
 
-  .btn{
-    background: #4CAF50;
-    color: #222;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-size: large;
-    padding: 10px;
-    margin: 10px 0 ;
-    border: none;
-    font-weight: bold;
-    transition: all 0.3s;
-  }
-  
+.btn {
+  background: #4CAF50;
+  color: #222;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
 
-  .btn:active([disabled]) {
-    cursor: not-allowed;
-  }
 
-  .btn:not([disabled]) {
-    cursor:pointer;
-  }
+.btn:active([disabled]) {
+  cursor: not-allowed;
+}
 
-  .btn:not([disabled]):hover{
-    color: black;
-    border: none;
-  }
+.btn:not([disabled]) {
+  cursor: pointer;
+}
 
-  #next-btn {
-    background-color: #4CAF50;
-    color: white;
-    font: bold;
-    width: 100px;
-    padding: 10px;
-    margin: 20px auto;
-    border-radius: 15px;
-    cursor: pointer;
-    display: none; 
-    border: none;
-  }
+.btn:not([disabled]):hover {
+  color: black;
+  border: none;
+}
 
-  #next-btn:hover {
-    background-color: green;
-  }
+#next-btn {
+  background-color: #4CAF50;
+  color: white;
+  font: bold;
+  width: 100px;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 15px;
+  cursor: pointer;
+  display: none;
+  border: none;
+}
+
+#next-btn:hover {
+  background-color: green;
+}
 
 
 .correct {
@@ -109,23 +108,24 @@ body {
 
 /* home page css */
 
-.start-game-container{
-width: 90%;
-max-width: 600px;
-background-color:  #fff;
-margin: 0 auto;
-border-radius: 20px;
-padding: 30px;
-border: 2px solid black;
-margin-top: 130px;
-height: 400px;
-text-align: center;
+.start-game-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid black;
+  margin-top: 130px;
+  height: 400px;
+  text-align: center;
 }
 
 .start-game-container h1 {
   font-size: 36px;
   margin-top: 60px;
 }
+
 .start-game-container p {
   font-size: 18px;
   margin-bottom: 30px;
@@ -156,16 +156,16 @@ text-align: center;
 /* game mode html */
 
 .pick-game-mdoe-container {
-width: 90%;
-max-width: 600px;
-background-color:  #fff;
-margin: 0 auto;
-border-radius: 20px;
-padding: 30px;
-border: 2px solid black;
-margin-top: 130px;
-height: 400px;
-text-align: center;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid black;
+  margin-top: 130px;
+  height: 400px;
+  text-align: center;
 }
 
 
@@ -192,24 +192,25 @@ text-align: center;
 .how-to-play h1 {
   padding-bottom: 14px;
 }
+
 .how-to-play p {
   font-weight: bold;
   padding-bottom: 20px;
 }
- 
+
 .how-to-play {
   width: 90%;
-max-width: 600px;
-background-color:  #fff;
-margin: 0 auto;
-border-radius: 20px;
-padding: 30px;
-border: 2px solid black;
-margin-top: 130px;
-height: 440px;
-text-align: center;
-font-size: 15px;
-position: relative;
+  max-width: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid black;
+  margin-top: 130px;
+  height: 440px;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
 }
 
 .how-to-play button {
@@ -228,6 +229,7 @@ position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .how-to-play button:hover {
   background-color: darkgreen;
 }
@@ -272,10 +274,38 @@ position: relative;
 /* Media Queries */
 
 /* How to play media queries */
+@media (max-width: 660px) {
+  .how-to-play ol {
+    font-size: 12px;
+    padding-top: 4px;
+  }
 
-@media screen and (max-width: 660px) {
-  
-  
+  .how-to-play h1 {
+    font-size: 20px;
+  }
+
+  .how-to-play p {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
 }
 
+@media (max-width: 400px) {
 
+  .how-to-play button {
+    font-size: 10px;
+    padding: 6px 10px;
+    margin-bottom: 4px;
+  }
+
+  .how-to-play h1 {
+    font-size: 16px;
+  }
+
+  .how-to-play p {
+    font-size: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+  }
+
+}
