@@ -1,45 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Link to css -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <title>Football quiz</title>
+    <title>Main Page</title>
 </head>
 <body>
     <div id="logo-container">
-        <a href="/home-page.html">
+        <a href="/index.html">
         <img class="logo" src="assets/images/logo.png" alt="logo">
         </a>
     </div>
-    
 
-    <div class="quiz-area-container">
-        <div class="questionAndBtn-container">
-            <div class="mode-con">
-            <button class="game-mode-btns" id="easy">EASY</button>
-            <button class="game-mode-btns" id="hard">HARD</button>
-        </div>
-            <h2 id="question">Question Goes Here</h2>
-            <div id="options-btn">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-            <button id="next-btn">Next</button>
-        </div>
-
-      <p id="countdown">02:00</p>
+    <div class="start-game-container">
+        <h1>Welcome To The Football !</h1>
+        <p>Test your knowledge with our challenging questions.</p>
+        <button onclick="myFunction()" id="start-game-btn" >Pick A Game Mode </button>
+        <a href="how-to-play.html">
+            <button id="how-to-play-btn">How to play</button>
+        </a>
     </div>
 
+    
 
-    <script src="assets/js/script.js"></script>
+    <script >
+        function myFunction () {
+            window.location.href = "index.html"
+        }
+    </script>
+
 </body>
 </html>
