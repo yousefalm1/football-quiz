@@ -269,10 +269,6 @@ body {
 }
 
 
-/* .mode-con {
-  padding: 117.5px;
-
-} */
 
 
 
@@ -314,6 +310,18 @@ body {
   }
 
 /* Game mode Media Queries */
-@media (max-width: 540px) {
+@media (max-width: 400px) {
+  #options-btn {
+    grid-template-columns: none;
+    gap: 2px;
+    margin-top: 5px;
+  }
+  .btn {
+    font-size: 12px;
+    }
+  #question{
+    font-size: 16px;
+  }
+
 }
 

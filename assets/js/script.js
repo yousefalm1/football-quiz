@@ -403,7 +403,6 @@ easyBtn.addEventListener("click", function(e) {
     
 });
 
-
 hardBtn.addEventListener("click", function(e) {
     container.classList.remove("mode-con");  
     countdownEl.style.display = "block";
