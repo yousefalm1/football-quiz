@@ -214,7 +214,6 @@ body {
   height: 440px;
   text-align: center;
   font-size: 15px;
-  position: relative;
 }
 
 .how-to-play button {
@@ -282,8 +281,6 @@ body {
 
 
 /* Index(Home Page) Media Queries */
-
-
 @media (max-width: 615px) {
   .start-game-container h1 {
     margin-top: 30px;
@@ -302,44 +299,16 @@ body {
 }
 
 
+/* How To Play Media Queries */
 
-
-
-
-
-
-
-
-
-/* How to play Media Queries */
-/* @media (max-width: 660px) {
-  .how-to-play ol {
+@media (max-width: 600px) {
+  .how-to-play {
     font-size: 12px;
-    padding-top: 4px;
-  }
-
-  .how-to-play h1 {
-    font-size: 20px;
-  }
-
-  .how-to-play p {
-    font-size: 14px;
-    padding-bottom: 16px;
   }
 }
+  @media (max-width: 380px) {
+    .how-to-play {
+      font-size: 10px;
+    }
+  }
 
-@media (max-width: 400px) {
-  .how-to-play button {
-    font-size: 10px;
-    padding: 6px 10px;
-    margin-bottom: 4px;
-  }
-  .how-to-play h1 {
-    font-size: 16px;
-  }
-  .how-to-play p {
-    font-size: 12px;
-    padding-bottom: 10px;
-    margin-bottom: 6px;
-  }
-} */
