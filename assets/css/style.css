@@ -309,7 +309,7 @@ body {
     }
   }
 
-/* Game mode Media Queries */
+/* Quiz Meida Queries */
 @media (max-width: 400px) {
   #options-btn {
     grid-template-columns: none;
@@ -321,6 +321,13 @@ body {
     }
   #question{
     font-size: 16px;
+  }
+  #countdown {
+    font-size: 16px;
+    height: 40px;
+    padding: 10px 5px 10px 25px;
+    
+
   }
 
 }
