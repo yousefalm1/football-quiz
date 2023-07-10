@@ -387,6 +387,7 @@ startQuiz();
 
 
 const easyBtn =  document.getElementById('easy');
+const hardBtn = document.getElementById('hard');
 const answerBtn = document.getElementsByClassName('btn')
 const container = document.getElementsByClassName('mode-con')[0]
 const startGameBtn = document.getElementById('start-game-btn');
@@ -399,9 +400,9 @@ easyBtn.addEventListener("click", function(e) {
     questionDisplay.style.display = "block"; // Display the question
     optionsBtn.style.display = "grid"
     hardBtn.style.display = "none"
+    
 });
 
-const hardBtn = document.getElementById('hard');
 
 hardBtn.addEventListener("click", function(e) {
     container.classList.remove("mode-con");  
@@ -412,7 +413,6 @@ hardBtn.addEventListener("click", function(e) {
     hardBtn.style.display = "none";
     setInterval(startTimer, 1000);
 
-  
 });
 
 

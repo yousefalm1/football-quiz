@@ -214,6 +214,7 @@ body {
   height: 440px;
   text-align: center;
   font-size: 15px;
+  position: relative;
 }
 
 .how-to-play button {
@@ -268,10 +269,10 @@ body {
 }
 
 
-.mode-con {
+/* .mode-con {
   padding: 117.5px;
 
-}
+} */
 
 
 
@@ -311,4 +312,8 @@ body {
       font-size: 10px;
     }
   }
+
+/* Game mode Media Queries */
+@media (max-width: 540px) {
+}
 
