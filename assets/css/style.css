@@ -153,6 +153,10 @@ body {
   background-color: darkgreen;
 }
 
+
+
+
+
 /* game mode html */
 
 .pick-game-mdoe-container {
@@ -271,10 +275,44 @@ body {
 }
 
 
-/* Media Queries */
 
-/* How to play media queries */
-@media (max-width: 660px) {
+
+
+/* MEDIA QUERIES */
+
+
+/* Index(Home Page) Media Queries */
+
+
+@media (max-width: 615px) {
+  .start-game-container h1 {
+    margin-top: 30px;
+  }
+
+  .start-game-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .start-game-container button {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* How to play Media Queries */
+/* @media (max-width: 660px) {
   .how-to-play ol {
     font-size: 12px;
     padding-top: 4px;
@@ -286,26 +324,22 @@ body {
 
   .how-to-play p {
     font-size: 14px;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
   }
 }
 
 @media (max-width: 400px) {
-
   .how-to-play button {
     font-size: 10px;
     padding: 6px 10px;
     margin-bottom: 4px;
   }
-
   .how-to-play h1 {
     font-size: 16px;
   }
-
   .how-to-play p {
     font-size: 12px;
     padding-bottom: 10px;
     margin-bottom: 6px;
   }
-
-}
+} */
