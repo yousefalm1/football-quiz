@@ -203,7 +203,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = 2;
+const startingMinutes = 1;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
