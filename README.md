@@ -23,12 +23,34 @@
 ![Image of how to play](/documentation/how-to-play.jpg)
 
 ### Pick A Game Mode  
-* The "pick a game mode" page is part of quiz.html, which utilises JavaScript to dynamically modify the html, deleting the option buttons, question, next question, and timer, and only showing the two game mode buttons.
-* The page is enclosed in a  white box to maintain the consistent design theme of the quiz.
+* The "pick a game mode" page is part of quiz.html, which utilises JavaScript to dynamically modify the html, by removing the option buttons, question, next question, and timer, and only showing the two game mode buttons.
+* The contnet of the page is enclosed in a  white box to maintain the consistent design theme of the quiz.
 * When a user clicks the "pick a game mode" button on the main page or the how to play page, they are brought to this page.
 * Two light green buttons appear on the page, matching the colour scheme used throughout the quiz. When hovered over, these buttons change colour from light green to dark green, indicating interactivity.
 * The first button displays the word "Easy" and, when clicked, removes the timer from the quiz, allowing the user to answer questions at their own pace. 
 * The second option displays the term "Hard" and, when clicked, adds a 1-minute timer into the quiz, making it more difficult for the user to answer questions within the time limit.
+
+![Image of pick a game mode](/documentation/game-mode.jpg)
+
+### The Quiz
+
+
+* The "quiz" page is part of index.html and is responsible for showing the quiz questions and answer possibilities by dynamically modifying the html with JavaScript.
+* The page content is enclosed in a white box, ensuring a consistent design throughout the quiz.
+* The question is shown at the top centre of the box, providing the user with a clear focus. Following the question are four buttons, each of which represents an answer option. These buttons are designed in the same way as the buttons used throughout the quiz, ensuring visual consistency.
+* When the user selects an answer, JavaScript code is executed to determine whether the answer is right. To indicate correctness, the selected response button is highlighted in either red or green.
+* A smaller button but the with the same style as the other buttons in the quiz, appears in the bottom centre of the white box, with the word "next" displayed which loads a new question with new answer options when clicked.
+* When the timer reaches 00:00 in the "Hard" mode, JavaScript code redirects the user to the "show score" page, signifying the conclusion of the quiz and displaying the final result; if the user picked easy mode the "next" button on the last question redirects the user to the "show score" page.
+* The Fisher-Yates shuffle algorithm (https://www.youtube.com/watch?v=TdOUjGfv1Gs) is used to shuffle the questions displayed.
+
+![Image of easy quiz mode](/documentation/easy-quiz.jpg)
+![Image of hard quiz mode](/documentation/hard-quiz.jpg)
+
+
+
+
+
+
 
 
 
