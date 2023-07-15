@@ -63,7 +63,7 @@ body {
 }
 
 
-.btn:active([disabled]) {
+.btn:active:disabled {
   cursor: not-allowed;
 }
 

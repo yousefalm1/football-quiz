@@ -68,7 +68,15 @@
 ## Testing
 
 ### Validator Testing
+* HTML
+    * index.html: When the code was validated using the official W3C validator, no errors were found.
+    ![Image of index.html W3C](/documentation/index-w3c.jpg)
+    * quiz.html: When the code was validated using the official W3C validator, no errors were found.
+    ![Image of quiz.html W3C](/documentation/quiz-w3c.jpg)
+    * how-to-play.html: When the code was validated using the official W3C validator, no errors were found.
+    !![Image of how-to-play.html W3C](/documentation/how-to-play-w3c.jpg)
 
+    
 
 
 
