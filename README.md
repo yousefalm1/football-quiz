@@ -52,6 +52,23 @@
 * CSS
 * JavaScript
 
+## Deployment
+* The following steps were used to deploy the site to GitHub pages:
+    * Sign in to GitHub and select the football-quiz from Your profile.
+    * Go to the top of the screen and select settings .
+    * Navigate to pages listed on the left side menu.
+    * Locate the source and choose "Deploy from a branch".
+    * Locate branch  and select the "Main".
+    * Select Save.
+    * Allow a few moments for the live site with the URL https://yousefalm1.github.io/football-quiz/ to load.
+
+## Credits
+### Code
+* I used https://www.youtube.com/watch?v=x7WJEmxNlEs for the timer to help me understand how to incorporate a timer into the quiz.
+
+* I used the Fisher-Yates algorithm to shuffle the questions.
+
+* The show score, reset state, and show question javaScript code was adapted from https://www.youtube.com/watch?v=PBcqGxrr9g8. 
 
 
 
