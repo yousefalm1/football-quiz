@@ -62,6 +62,17 @@
     * Select Save.
     * Allow a few moments for the live site with the URL https://yousefalm1.github.io/football-quiz/ to load.
 
+
+
+
+## Testing
+
+### Validator Testing
+
+
+
+
+
 ## Credits
 ### Code
 * I used https://www.youtube.com/watch?v=x7WJEmxNlEs for the timer to help me understand how to incorporate a timer into the quiz.
@@ -69,7 +80,6 @@
 * I used the Fisher-Yates algorithm to shuffle the questions.
 
 * The show score, reset state, and show question javaScript code was adapted from https://www.youtube.com/watch?v=PBcqGxrr9g8. 
-
 
 
 
