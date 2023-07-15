@@ -46,8 +46,11 @@
 ![Image of easy quiz mode](/documentation/easy-quiz.jpg)
 ![Image of hard quiz mode](/documentation/hard-quiz.jpg)
 
-
-
+## Technologies Used
+### Languages
+* HTML
+* CSS
+* JavaScript
 
 
 
