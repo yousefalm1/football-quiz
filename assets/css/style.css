@@ -10,7 +10,7 @@
 
 
 body {
-  background: url(../images/fooo.jpg);
+  background: url(../images/football-pitch.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -303,11 +303,12 @@ body {
     font-size: 12px;
   }
 }
-  @media (max-width: 380px) {
-    .how-to-play {
-      font-size: 10px;
-    }
+
+@media (max-width: 380px) {
+  .how-to-play {
+    font-size: 10px;
   }
+}
 
 /* Quiz Meida Queries */
 @media (max-width: 400px) {
@@ -316,19 +317,18 @@ body {
     gap: 2px;
     margin-top: 5px;
   }
+
   .btn {
     font-size: 12px;
-    }
-  #question{
+  }
+
+  #question {
     font-size: 16px;
   }
+
   #countdown {
     font-size: 16px;
     height: 40px;
     padding: 10px 5px 10px 25px;
-    
-
   }
-
 }
-

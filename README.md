@@ -1,3 +1,11 @@
+## Design
+### Images Used
+* Background : The background image of the quiz is a cartoon bird's-eye view of a football pitch. This was chosen because it is relevant to the quiz's topic and gives users the impression that the questions are part of the game, creating a strong connection between the quiz and football.
+![Image of football pitch used as background](/assets/images/football-pitch.jpg) 
+* Logo : The football-themed logo was chosen to complement the quiz's theme 
+![Image of football used as logo](/assets/images/logo.png) 
+
+
 ## Features
 
 ### The Home Page 
@@ -76,7 +84,11 @@
     * how-to-play.html: When the code was validated using the official W3C validator, no errors were found.
     !![Image of how-to-play.html W3C](/documentation/how-to-play-w3c.jpg)
 
-    
+* CSS
+    * style.css: When the code was validated using the official W3C CSS validator, no errors were found.
+    !![Image of style.css W3C CSS](/documentation/style-w3c.jpg)
+
+* JavaScript
 
 
 
@@ -88,6 +100,7 @@
 * I used the Fisher-Yates algorithm to shuffle the questions.
 
 * The show score, reset state, and show question javaScript code was adapted from https://www.youtube.com/watch?v=PBcqGxrr9g8. 
+
 
 
 
