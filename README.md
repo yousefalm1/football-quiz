@@ -1,10 +1,3 @@
-## Design
-### Images Used
-* Background : The background image of the quiz is a cartoon bird's-eye view of a football pitch. This was chosen because it is relevant to the quiz's topic and gives users the impression that the questions are part of the game, creating a strong connection between the quiz and football.
-![Image of football pitch used as background](/assets/images/football-pitch.jpg) 
-* Logo : The football-themed logo was chosen to complement the quiz's theme 
-![Image of football used as logo](/assets/images/logo.png) 
-
 
 ## Features
 
@@ -54,11 +47,19 @@
 ![Image of easy quiz mode](/documentation/easy-quiz.jpg)
 ![Image of hard quiz mode](/documentation/hard-quiz.jpg)
 
+
+## Design
+### Images Used
+* Background : The background image of the quiz is a cartoon bird's-eye view of a football pitch. This was chosen because it is relevant to the quiz's topic and gives users the impression that the questions are part of the game, creating a strong connection between the quiz and football.
+![Image of football pitch used as background](/assets/images/football-pitch.jpg) 
+* Logo : The football-themed logo was chosen to complement the quiz's theme 
+![Image of football used as logo](/assets/images/logo.png) 
+
 ## Technologies Used
 ### Languages
-* HTML
-* CSS
-* JavaScript
+* HTML - https://www.w3schools.com/whatis/whatis_html.asp
+* CSS - https://www.w3schools.com/whatis/whatis_css.asp
+* JavaScript - https://www.w3schools.com/whatis/whatis_js.asp
 
 ## Deployment
 * The following steps were used to deploy the site to GitHub pages:
