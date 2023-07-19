@@ -100,7 +100,8 @@
 ### Code
 * I used https://www.youtube.com/watch?v=x7WJEmxNlEs for the timer to help me understand how to incorporate a timer into the quiz.
 
-* I used the Fisher-Yates algorithm to shuffle the questions.
+* I used the Fisher-Yates algorithm to shuffle the questions (https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/). 
+
 
 * The show score, reset state, and show question javaScript code was adapted from https://www.youtube.com/watch?v=PBcqGxrr9g8. 
 
