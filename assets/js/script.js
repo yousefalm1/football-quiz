@@ -21,7 +21,7 @@ const questions = [
     {
         question: 'Which player has won the most Ballon D`Or awards?',
         answers: [
-            { text: 'Lionel Messi',correct: true },
+            { text: 'Lionel Messi', correct: true },
             { text: 'Cristiano Ronaldo', correct: false },
             { text: 'Diego Maradona', correct: false },
             { text: 'Pelé', correct: false },
@@ -95,7 +95,7 @@ const questions = [
         answers: [
             { text: 'Mikel Arteta', correct: false },
             { text: 'Jose Mourinho', correct: false },
-            { text: 'Pep Guardiola', correct: true},
+            { text: 'Pep Guardiola', correct: true },
             { text: 'Jurgen Klopp', correct: false },
         ]
     },
@@ -203,7 +203,7 @@ let score = 0;
 
 
 // set the starting minutes to 2
-const startingMinutes = 1;
+const startingMinutes = 0.50;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -258,13 +258,12 @@ function shuffle(array) {
 }
 
 function startQuiz() {
-    // Shuffle the questions array
-    const shuffledQuestions = shuffle(questions);
+    shuffle(questions);
     // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
     // To make sure that the users score is zero in the start
     score = 0;
-    nextButton.innerHTML = "Next"
+    nextButton.innerHTML = "Next";
     // calls the show question function which will display the first question in the array
     showQuestion();
     startTimer();
@@ -347,9 +346,9 @@ function showScoreFinish() {
     // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
-    questionDisplay.style.display = "block"
-    easyBtn.style.display = "none"
-    hardBtn.style.display = "none"
+    questionDisplay.style.display = "block";
+    easyBtn.style.display = "none";
+    hardBtn.style.display = "none";
 }
 
 
@@ -370,7 +369,7 @@ function advanceToNextQuestion() {
 
 // the nextButton element has an event listener  attached to it with the click event
 // when the next button is clicked it will execute the arrow function 
-nextButton.addEventListener("click",() => {
+nextButton.addEventListener("click", () => {
     // insdie the arrow function the if statement this is to check if there a more questions to dispaly by comparing the currentQuestionIndex with the length of the questions array.
     if (currentQuestionIndex < questions.length) {
         // if currentQuestionIndex is less than questions.length then that means there are more questions to display.
@@ -386,29 +385,27 @@ nextButton.addEventListener("click",() => {
 startQuiz();
 
 
-const easyBtn =  document.getElementById('easy');
+const easyBtn = document.getElementById('easy');
 const hardBtn = document.getElementById('hard');
-const answerBtn = document.getElementsByClassName('btn')
-const container = document.getElementsByClassName('mode-con')[0]
-const startGameBtn = document.getElementById('start-game-btn');
+const container = document.getElementsByClassName('mode-con')[0];
 const optionsBtn = document.getElementById('options-btn');
 
-easyBtn.addEventListener("click", function(e) {
-    container.classList.remove("mode-con");  
+easyBtn.addEventListener("click", function (e) {
+    container.classList.remove("mode-con");
     countdownEl.style.display = "none";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
-    optionsBtn.style.display = "grid"
-    hardBtn.style.display = "none"
-    
+    optionsBtn.style.display = "grid";
+    hardBtn.style.display = "none";
+
 });
 
-hardBtn.addEventListener("click", function(e) {
-    container.classList.remove("mode-con");  
+hardBtn.addEventListener("click", function (e) {
+    container.classList.remove("mode-con");
     countdownEl.style.display = "block";
     easyBtn.style.display = "none";
     questionDisplay.style.display = "block"; // Display the question
-    optionsBtn.style.display = "grid"
+    optionsBtn.style.display = "grid";
     hardBtn.style.display = "none";
     setInterval(startTimer, 1000);
 
@@ -425,4 +422,4 @@ hardBtn.addEventListener("click", function(e) {
 // make it that the timer only starts when you click the game modes on hard mode 
 // the timer on the easy game mode still works but dosent show so it redirects you the show score screen same as hard mode
 // added a [0] to the const container = document.getElementsByClassName('mode-con')[0] this make the class i added to the game mode btns to go away when i click either mode btns
-// used https://www.youtube.com/watch?v=x7WJEmxNlEs to help
+// <a> was outside the bottom i fixed it by adding onlcikc

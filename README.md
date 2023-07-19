@@ -89,9 +89,12 @@
     !![Image of style.css W3C CSS](/documentation/style-w3c.jpg)
 
 * JavaScript
-
-
-
+    * No errors were found when passing through the official JSHint validator.
+    * These are the metrics returned:
+        * There are 15 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 0.
+        * Largest function has 9 statements in it, while the median is 5.
+        * The most complex function has a cyclomatic complexity value of 3 while the median is 1.
 
 ## Credits
 ### Code
