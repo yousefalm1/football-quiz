@@ -1,48 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Meta Tags -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="description" content="Football quiz">
     <meta name="keywords" content="footbal, quiz, online quiz, footbal quiz, multiple choice quiz">
 
-    <!-- Link to css -->
+    <!-- Link To Css -->
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 
     <title>Football quiz</title>
 </head>
+
 <body>
-    <div id="logo-container">
+    <header id="logo-container">
         <a href="index.html">
-        <img class="logo" src="assets/images/logo.png" alt="logo">
+            <img class="logo" src="assets/images/logo.png" alt="logo">
         </a>
-    </div>
-    
+        </>
 
-    <div class="quiz-area-container">
-        <div class="questionAndBtn-container">
-            <div class="mode-con">
-            <button class="game-mode-btns" id="easy">EASY</button>
-            <button class="game-mode-btns" id="hard">HARD</button>
-        </div>
-            <h2 id="question">Question Goes Here</h2>
-            <div id="options-btn">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+
+        <div class="quiz-area-container">
+            <div class="questionAndBtn-container">
+                <div class="mode-con">
+                    <button class="game-mode-btns" id="easy">EASY</button>
+                    <button class="game-mode-btns" id="hard">HARD</button>
+                </div>
+                <h2 id="question">Question Goes Here</h2>
+                <div id="options-btn">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
             </div>
-            <button id="next-btn">Next</button>
+
+            <p id="countdown">02:00</p>
         </div>
 
-      <p id="countdown">02:00</p>
-    </div>
 
-
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
+
 </html>
