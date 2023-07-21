@@ -197,59 +197,65 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 
-
-
-// TIMER
-
-
-// set the starting minutes to 2
+// Timer
+// set the starting minutes to 30 sec
 const startingMinutes = 0.50;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
-
 const countdownEl = document.getElementById('countdown');
-// this calls the startTimer function every second
-
-// setInterval(startTimer, 1000);
 
 /**
- * starts the timer, this functin will be called in the startQuiz function
+ * Starts the countdown timer and updates the timer display in the UI.
+ *
+ * This function calculates the minutes and seconds remaining based on the 'time' variable, which represents the remaining time in seconds.
+ * It then updates the timer display in the HTML element with the formatted countdown in "minutes:seconds" format.
+ *
+ * The function also checks if the value of 'seconds' is less than 10, and if it is, it adds a leading zero to the value to ensure proper formatting.
+ *
+ * The countdown updates every second (time decremented by 1) using the 'setInterval' method.
+ * If the 'time' variable reaches 0, the function calls 'stopTimer' to stop the timer and perform end-of-quiz actions.
  */
 function startTimer() {
-    // Calculate the minutes and seconds remaining
-
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
-    // display the countdown in the HTML Element
-
-    // the seconds part checks if the value of 'seconds' is less than 10, and if it is then it adds a leading zero to the value 
-    // if seconds is not less than 10, it will use the the orgianl value of 'seconds'
     countdownEl.innerHTML = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-
-    // if the time variable (which represents the remaining time in seconds) is greater than 0, it will decrement it by 1.
-    // if the time reaches 0 the stopTimer function will be called to stop the timer.
     if (time > 0) {
         time--;
     } else {
         stopTimer();
     }
 }
+/**
+ * Stops the countdown timer, displays "Time's up!" in the UI, and performs end-of-quiz actions.
+ *
+ * This function clears the interval timer set by 'startTimer' using 'clearInterval(timerInterval)' to stop the countdown.
+ * It then updates the timer display in the HTML element with the message "Time's up!" to indicate that the quiz time has elapsed.
+ *
+ * The function calls 'showScoreFinish' to handle end-of-quiz actions, displaying the user's final score and stopping the timer.
+ */
 function stopTimer() {
     clearInterval(timerInterval);
     countdownEl.innerHTML = "Time's up!";
     showScoreFinish();
 }
 
+/**
+ * Resets the countdown timer to the initial time and updates the timer display in the UI.
+ *
+ * This function sets the 'time' variable back to the initial time in seconds, calculated from 'startingMinutes'.
+ * It then updates the timer display in the HTML element with the formatted countdown in "minutes:seconds" format.
+ */
 function resetTimer() {
     time = startingMinutes * 60;
     countdownEl.innerHTML = `${startingMinutes}:00`;
 
 }
-
+/**
+ * Shuffles the elements of the input array in place using the Fisher-Yates (Knuth) shuffle algorithm.
+ * https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
+ */
 function shuffle(array) {
-    // Fisher-Yates shuffle algorithm
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -257,46 +263,75 @@ function shuffle(array) {
     return array;
 }
 
+/**
+ * Starts the quiz and displays the first question.
+ *
+ * This function is called when the user initiates the quiz, typically by clicking the "Start Quiz" button.
+ *
+ * It first shuffles the 'questions' array using the 'shuffle' function to randomise the order of the questions,
+ * ensuring a different question sequence each time the quiz starts.
+ *
+ * The function sets the 'currentQuestionIndex' to 0 to make sure that the first question in the shuffled 'questions' array is displayed initially.
+ * It also sets the 'score' to 0 to initialize the user's score at the start of the quiz.
+ *
+ * The 'nextButton' innerHTML is set to "Next" to indicate that it will be used for navigating to the next question during the quiz.
+ *
+ * Next, the function calls the 'showQuestion' function, which will display the first question in the shuffled 'questions' array to the user.
+ *
+ * Finally, the function starts the timer by calling the 'startTimer' function to begin the countdown for each question.
+*/
 function startQuiz() {
     shuffle(questions);
-    // To make sure that the first question in the question array is displayed in the start
     currentQuestionIndex = 0;
-    // To make sure that the users score is zero in the start
     score = 0;
     nextButton.innerHTML = "Next";
-    // calls the show question function which will display the first question in the array
     showQuestion();
     startTimer();
 }
 
-
+/**
+ * Displays the current question and its answer options in the UI.
+ *
+ * This function is called when moving to the next question in the quiz.
+ * It first calls the 'resetState' function to clear the state of the answer buttons and prepare the UI for displaying the current question.
+ *
+ * The function retrieves the current question object from the 'questions' array based on the 'currentQuestionIndex'.
+ * It then sets the inner text of the 'questionDisplay' element to the text of the current question, updating the question UI to show the question.
+ *
+ * Next, the function iterates over each answer in the 'answers' array of the current question using the 'forEach' method.
+ * For each answer, it creates a new button element, sets its inner text property to the text of the current answer,
+ * adds the "btn" class to the new button to apply appropriate styling, and appends the newly created button as a child element to the 'answerButtons' element.
+ * This process adds the buttons to the UI, displaying the answer options for the current question.
+ *
+ * While iterating through the answers, the function checks if the current answer is marked as correct (answer.correct),
+ * and if it is, it assigns the text of 'answer.text' to the 'correctAnswer' variable. This allows the 'selectAnswer' function to identify the correct answer later.
+ *
+ * The function attaches a click event listener to each button, and when a button is clicked, the 'selectAnswer' function is called to handle the user's answer selection.
+ */
 function showQuestion() {
-    // calls resetState function which clears the state of the answer buttons and prepares the UI for displaying the current question.
     resetState();
-    // retrieves the current question obejct from the questions array based on the currentQuestionIndex
-    // then assings the current Question object to the currentQuestion variable for easier access.
     const currentQuestion = questions[currentQuestionIndex];
-    // this sets the inner text of the questionDisplay element to the text of the current question, it updates the question UI to show the questioin
     questionDisplay.innerText = currentQuestion.question;
-    // iterates over each answer in the answers array of the current question using forEach
     currentQuestion.answers.forEach(answer => {
-        // inside the forEach it creates a new button element for each answer and assings the newly created buttons the "button" variable
         const button = document.createElement("button");
-        // sets the inner text property of the button to the text of the current answer
         button.innerText = answer.text;
-        // adds the btn class to the new buttons
         button.classList.add("btn");
-        // adds the newly created button as a child elemnet to the answerButtons element (this would add the btn to the UI)
         answerButtons.appendChild(button);
-        // this checks if the current answers is marked as correct (answer.correct) and if it is the "correctAnswer" is assigned the text of 'answer.text'
         if (answer.correct) {
             correctAnswer = answer.text;
         }
-        // Attached a click event listener to each button, and when the button is clicked the select answer function is called.
         button.addEventListener("click", selectAnswer);
     });
 }
-
+/**
+ * Resets the quiz state by hiding the "Next" button and clearing answer buttons.
+ *
+ * This function is called when moving to the next question or when the quiz ends.
+ * It hides the "Next" button in the UI by setting its style display property to "none".
+ *
+ * The function clears the answer buttons' content by removing all child elements from the 'answerButtons' container.
+ * This ensures that the buttons from the previous question are cleared and ready to display new answer options for the next question.
+ */
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild) {
@@ -304,46 +339,62 @@ function resetState() {
     }
 }
 
-
+/**
+ * Handles the user's selection of an answer and displays feedback.
+ *
+ * This function is called when the user clicks on an answer button during the quiz.
+ * It takes the event object as a parameter to identify which button was clicked (selected).
+ * The function compares the text of the selected button's inner text with the correct answer to determine if the user's choice is correct.
+ *
+ * If the selected answer is correct, the function adds the "correct" CSS class to the selected button,
+ * visually indicating that the answer is correct. It also increments the global variable 'score',
+ * which tracks the number of correct answers by the user.
+ *
+ * If the selected answer is incorrect, the function adds the "incorrect" CSS class to the selected button,
+ * visually indicating that the answer is incorrect.
+ *
+ * After the user selects an answer, the function disables all the answer buttons in the UI using a loop,
+ * preventing the user from selecting another answer after making their choice.
+ *
+ * Finally, the "Next" button is displayed in the UI to allow the user to move to the next question after selecting an answer.
+ */
 function selectAnswer(event) {
-    // retrieves the button element that was the clicked and assigns the button element to the selectedBtn 
     const selectedBtn = event.target;
-    // compares the text of the selectedBtn.inner text with the correctAnswer 
     const isCorrect = selectedBtn.innerText === correctAnswer;
-    // checks if the selected answer is correct, if "isCorrect" is true means the selected answer is correct and the code inside the 'if' block excutes.
-    // if false the code inside else block excutes
     if (isCorrect) {
-        // inside the if block it adds the correct css class to the selected btn which adds css style to visually show that the selected answer is correct
         selectedBtn.classList.add("correct");
-        // this increments the score variable tracking the number of correct answers
         score++;
-        // Adds the incorrect Css class to the selected btn. this isi to visually indicate that the selected answer is incorrect. 
     } else {
         selectedBtn.classList.add("incorrect");
     }
-    // this loops iterates over each child button element of the answerButtons container; And sets the disabled property to each btn to true 
-    // (Which prevents the user from selecting another answer after making their choice.)
     for (let button of answerButtons.children) {
         button.disabled = true;
     }
-    // "Next" button is displayed in the UI after the user has selected an answer.
     nextButton.style.display = "block";
 }
 
 /**
- * this function is to disply the final score and provide the user the option to play again
- */
+ * Displays the final score and end-of-quiz actions.
+ * 
+ * This function first calls the 'resetState()' function to clear the question display and answer buttons,
+ * Setting up the interface to display the final score and end-of-quiz message.
+ * 
+ * It updates the question display in the HTML Element with a message showing the user's score in the format "You scored x out of y!",
+ * where 'x' represents the user's score and 'y' is the total number of questions in the 'questions' array.
+ * 
+ * The function changes the innerHTML of the 'nextButton' to display "Go Back Home" and adds a click event listener to it.
+ * When the 'nextButton' is clicked, the function redirects the user to the home page (index.html) using 'window.location.href'.
+ * 
+ * The 'nextButton' style is set to "block" to make it visible, while 'countdownEl' and 'questionDisplay' styles are adjusted to hide them.
+ * The 'easyBtn' and 'hardBtn' styles are set to "none" to hide the difficulty selection buttons, as they are not needed after the quiz ends.
+*/
 function showScoreFinish() {
-    // the resetState function is called to clear the question display and answer buttons.
     resetState();
-    // updates question display with a message
     questionDisplay.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    // the innterHTML for next button is changed to play again
     nextButton.innerHTML = "Go Back Home";
     nextButton.addEventListener("click", () => {
         window.location.href = "index.html"; // Redirect to the home page
     });
-    // the next button style is  set to block to be visable
     nextButton.style.display = "block";
     countdownEl.style.display = "none";
     questionDisplay.style.display = "block";
@@ -351,16 +402,19 @@ function showScoreFinish() {
     hardBtn.style.display = "none";
 }
 
-
+/**
+ * Advances the quiz to the next question and handles end-of-quiz actions.
+ * 
+ * This function advances to the next question in the 'questions' array by incrementing the 'currentQuestionIndex' by one.
+ * It then checks if there are more questions to display by comparing 'currentQuestionIndex' with the length of the 'questions' array.
+ * If there are more questions to display, the function calls 'showQuestion()' to display the next question using the updated 'currentQuestionIndex'.
+ * 
+ * If there are no more questions to display, the function calls 'showScoreFinish()' to display the user's final score, and then it stops the timer using 'stopTimer()'.
+ */
 function advanceToNextQuestion() {
-    // this increments the currentQuestionIndex (which we declared) by 1 when moving to the next question in the questions array
     currentQuestionIndex++;
-    // this checks if there are more questions to dispaly this is done by compairng currentQuestionIndex with the length of the questions array
-    // if the currentQuestionIndex is less than the questions.length there are still more questions to show
     if (currentQuestionIndex < questions.length) {
-        // if there are more questions to display the showQuestion fuction will be called to dispaly the next questoin using the updated currentQuestionIndex
         showQuestion();
-        // if there are no more questions to display the showScoreFinish function is called to dispay how much the user got
     } else {
         showScoreFinish();
         stopTimer();
@@ -408,7 +462,6 @@ hardBtn.addEventListener("click", function (e) {
     optionsBtn.style.display = "grid";
     hardBtn.style.display = "none";
     setInterval(startTimer, 1000);
-
 });
 
 

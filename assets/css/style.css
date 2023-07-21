@@ -49,7 +49,7 @@ body {
 
 
 .btn {
-  background: #4CAF50;
+  background: #32cd32;
   color: #222;
   border-radius: 15px;
   cursor: pointer;
@@ -77,7 +77,7 @@ body {
 }
 
 #next-btn {
-  background-color: #4CAF50;
+  background-color: #32cd32 ;
   color: white;
   font: bold;
   width: 100px;
@@ -90,7 +90,7 @@ body {
 }
 
 #next-btn:hover {
-  background-color: green;
+  background-color: #006400;
 }
 
 
@@ -145,17 +145,13 @@ body {
   border-radius: 20px;
   cursor: pointer;
   color: white;
-  background-color: #4CAF50;
+  background-color: #32cd32 ;
   transition: background-color 0.3s;
 }
 
 .start-game-container button:hover {
-  background-color: #013220;
+  background-color: #006400;
 }
-
-
-
-
 
 /* game mode html */
 
@@ -183,7 +179,7 @@ body {
   width: 80px;
   height: 50px;
   margin: 0 auto;
-  background: #4CAF50;
+  background: #32cd32 ;
   color: #fff;
   display: none;
 }
@@ -226,7 +222,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
   color: white;
-  background-color: #4CAF50;
+  background-color: #32cd32 ;
   transition: background-color 0.3s;
   position: absolute;
   bottom: 0;
@@ -235,7 +231,7 @@ body {
 }
 
 .how-to-play button:hover {
-  background-color: darkgreen;
+  background-color: #006400;
 }
 
 .how-to-play a {
@@ -244,7 +240,7 @@ body {
 
 
 .game-mode-btns {
-  background-color: #4CAF50;
+  background-color: #32cd32 ;
   color: white;
   border: none;
   border-radius: 15px;
@@ -257,7 +253,7 @@ body {
 }
 
 .game-mode-btns:hover {
-  background-color: #45a049;
+  background-color: #006400;
 }
 
 .game-mode-btns:focus {
