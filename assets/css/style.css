@@ -104,6 +104,7 @@ body {
 
 #question {
   display: none;
+  font-family: "roboto mono",sans-serif, arial;
 }
 
 /* home page css */
@@ -124,6 +125,7 @@ body {
 .start-game-container h1 {
   font-size: 36px;
   margin-top: 60px;
+  font-family: "roboto mono",sans-serif, arial;
 }
 
 .start-game-container p {
@@ -191,11 +193,13 @@ body {
 
 .how-to-play h1 {
   padding-bottom: 14px;
+  font-family: "roboto mono",sans-serif, arial;
 }
 
 .how-to-play p {
   font-weight: bold;
   padding-bottom: 20px;
+  font-family: "roboto mono",sans-serif, arial;
 }
 
 .how-to-play {
@@ -258,10 +262,6 @@ body {
 
 .game-mode-btns:focus {
   outline: none;
-}
-
-.game-mode-btns:active {
-  background-color: #3e8948;
 }
 
 
