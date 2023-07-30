@@ -1,8 +1,13 @@
+## User Experience
+### User Stories
+* As a parent, I wanted to bond with my children by participating in a family-friendly quiz, and this quiz did just that.
 
+* I'd like to take an interactive quiz as a football fan to learn interesting facts and trivia about football teams, players, and historical events, and this quiz really tested my knowledge.
+
+* As a football trivia fan, I'd like to participate in a quiz with difficult and obscure questions that will put even the most ardent football fans to the test, and this quiz showed me some difficult questions.
 ## Features
 
 ### The Home Page 
-
 
 * The Home Page welcomes users and gives them access to key options as the quiz application's entry point.
 * The entire content of the home page is enclosed in a white box that will remain constant throughout the quiz. The background of the home page is a football pitch to match the quiz's theme, and there is a football logo at the top left of the page that can be clicked to return the user to the home page.
@@ -55,6 +60,10 @@
 * Logo : The football-themed logo was chosen to complement the quiz's theme 
 ![Image of football used as logo](/assets/images/logo.png) 
 
+
+### Typography
+### Colour Scheme
+
 ## Technologies Used
 ### Languages
 * HTML - https://www.w3schools.com/whatis/whatis_html.asp
@@ -72,10 +81,7 @@
     * Allow a few moments for the live site with the URL https://yousefalm1.github.io/football-quiz/ to load.
 
 
-
-
 ## Testing
-
 ### Validator Testing
 * HTML
     * index.html: When the code was validated using the official W3C validator, no errors were found.
@@ -96,6 +102,9 @@
         * Function with the largest signature take 1 arguments, while the median is 0.
         * Largest function has 9 statements in it, while the median is 5.
         * The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+
+
+### Lighthouse
 
 ## Credits
 ### Code
