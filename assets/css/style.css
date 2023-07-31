@@ -191,6 +191,7 @@ body {
 /* how to play */
 
 
+
 .how-to-play h1 {
   padding-bottom: 14px;
   font-family: "roboto mono",sans-serif, arial;
@@ -215,6 +216,7 @@ body {
   text-align: center;
   font-size: 15px;
   position: relative;
+  margin-top: 60px;
 }
 
 .how-to-play button {
@@ -327,4 +329,8 @@ body {
     height: 40px;
     padding: 10px 5px 10px 25px;
   }
+  .how-to-play {
+    margin-top: 55px;
+  }
 }
+
