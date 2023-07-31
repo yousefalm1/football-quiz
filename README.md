@@ -103,26 +103,36 @@
         * Largest function has 9 statements in it, while the median is 5.
         * The most complex function has a cyclomatic complexity value of 3 while the median is 1.
 
-
 ### Lighthouse
 * Lighthouse Testing on desktop.
     ![Image of lighthouse on desktop](/documentation/lighthouse-desktop.png)
 * Lighthouse Testing on mobile.
     ![Image of lighthouse on mobile](/documentation/lighthouse-mobile.png)
 
+* Responsiveness
+* The website is responsive to all devices within the ranges specified below.
+    * 310px - 380px
+    * 381px - 600px
+    * 601px - and above
 
-
+* Bugs 
+    * Bug 1: 
 ## Credits
 ### Code
 * I used https://www.youtube.com/watch?v=x7WJEmxNlEs for the timer to help me understand how to incorporate a timer into the quiz.
 
 * I used the Fisher-Yates algorithm to shuffle the questions (https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/). 
 
-
 * The show score, reset state, and show question javaScript code was adapted from https://www.youtube.com/watch?v=PBcqGxrr9g8. 
 
-
-
+### Media
+* All meida came from https://www.pexels.com/
+### Technologies Used
+* Favicon Generator
+* Image Converters
+    * pixelied
+    * Tiny Img
+* Google Fonts
 
 
 
