@@ -89,11 +89,11 @@
     * quiz.html: When the code was validated using the official W3C validator, no errors were found.
     ![Image of quiz.html W3C](/documentation/quiz-w3c.jpg)
     * how-to-play.html: When the code was validated using the official W3C validator, no errors were found.
-    !![Image of how-to-play.html W3C](/documentation/how-to-play-w3c.jpg)
+    ![Image of how-to-play.html W3C](/documentation/how-to-play-w3c.jpg)
 
 * CSS
     * style.css: When the code was validated using the official W3C CSS validator, no errors were found.
-    !![Image of style.css W3C CSS](/documentation/style-w3c.jpg)
+    ![Image of style.css W3C CSS](/documentation/style-w3c.jpg)
 
 * JavaScript
     * No errors were found when passing through the official JSHint validator.
@@ -105,6 +105,12 @@
 
 
 ### Lighthouse
+* Lighthouse Testing on desktop.
+    ![Image of lighthouse on desktop](/documentation/lighthouse-desktop.png)
+* Lighthouse Testing on mobile.
+    ![Image of lighthouse on mobile](/documentation/lighthouse-mobile.png)
+
+
 
 ## Credits
 ### Code
