@@ -128,18 +128,28 @@
 ### Media
 * All meida came from https://www.pexels.com/
 ### Technologies Used
-* Favicon Generator
+* [Favicon](https://www.favicon.cc/) Generator
 * Image Converters
-    * pixelied
-    * Tiny Img
-* Google Fonts
+    * [Pixelied](https://pixelied.com/convert/jpg-converter/jpg-to-webp)
+    * [Tiny Img](https://tiny-img.com/webp/)
+* [Google Fonts](https://fonts.google.com/) for fonts
 
+## Wireframes
 
+### Home Page
+![Image of home page wireframe](/documentation/wireframe-home.png)
 
+### How To Play
+![Image of how to play page wireframe](/documentation/wireframe-howtoplay.png)
 
+### Pick Game Mode
+![Image of pick game mode page wireframe](/documentation/wireframe-pickgamemode.png)
 
+### Quiz
+![Image of quiz page wireframe](/documentation/wireframe-quiz.png)
 
-
+### Score
+![Image of score page wireframe](/documentation/wireframe-score.png)
 
 
 
