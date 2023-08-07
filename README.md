@@ -1,3 +1,13 @@
+# Algebra Penguins
+
+Algebra Penguins is a website game for people to practice algebra. It is aimed at beginner learners and those whom would like to relearn or practice some mental arithmatic. This website hopes to make algebra both fun and relaxed. The website has an encouraging and easy going approach to the ways it interacts with the user. You can visit the site [here](https://alfreda93.github.io/algebra-penguins/)
+
+![am i responsive](assets/documentation-webp/amiresponsive.webp)
+
+
+
+
+
 ## User Experience
 ### User Stories
 * As a parent, I wanted to bond with my children by participating in a family-friendly quiz, and this quiz did just that.
