@@ -1,6 +1,6 @@
-# Algebra Penguins
+# Football Quiz
 
-Algebra Penguins is a website game for people to practice algebra. It is aimed at beginner learners and those whom would like to relearn or practice some mental arithmatic. This website hopes to make algebra both fun and relaxed. The website has an encouraging and easy going approach to the ways it interacts with the user. You can visit the site [here](https://alfreda93.github.io/algebra-penguins/)
+"Football Quiz" is an exciting multiple-choice quiz with two levels: easy and hard. Test your football knowledge with fun questions about players, teams, and history. Choose the easy level for beginners or challenge yourself with the hard level, which includes a thrilling timer to keep you on your toes [here](https://yousefalm1.github.io/football-quiz/)
 
 ![am i responsive](assets/documentation-webp/amiresponsive.webp)
 
@@ -72,7 +72,27 @@ Algebra Penguins is a website game for people to practice algebra. It is aimed a
 
 
 ### Typography
+
 ### Colour Scheme
+* the color scheme used was based on the colors seen on football pitch this inlcudes black, green and white.
+
+* the green used was lime green since it pops out more than other greens,This green was also used for all buttons on the page before being hovered upon.
+![Image of lime green](/documentation/lime-green.png)
+
+
+* the color of green for when the user hovers over the buttons on the page is dark green, this was used to add contrast between the lime green color so the user knows when they hoverd over the button
+
+![Image of dark green](/documentation/dark-green.png)
+
+* The other green used was for when the user selects the correct answer this green was used to diffrenacet between the green button and wether the answer  was correct or not.
+![Image of correct green](/documentation/correct-green.png)
+
+* The color for when the answer the user selected was incorrect was a red similar to the correct green this was to make it look aseticlly pleasing and not have one dark red and one light green
+![Image of correct red](/documentation/incorrect-red.png)
+
+
+
+
 
 ## Technologies Used
 ### Languages
