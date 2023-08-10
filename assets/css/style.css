@@ -30,7 +30,7 @@ body {
   border-radius: 20px;
   padding: 30px;
   border: 2px solid black;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 .questionAndBtn-container {
@@ -120,6 +120,7 @@ body {
   margin-top: 130px;
   height: 400px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .start-game-container h1 {
@@ -186,11 +187,7 @@ body {
   display: none;
 }
 
-
-
 /* how to play */
-
-
 
 .how-to-play h1 {
   padding-bottom: 14px;
@@ -216,7 +213,7 @@ body {
   text-align: center;
   font-size: 15px;
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .how-to-play button {
@@ -266,14 +263,7 @@ body {
   outline: none;
 }
 
-
-
-
-
-
-
 /* MEDIA QUERIES */
-
 
 /* Index(Home Page) Media Queries */
 @media (max-width: 615px) {
@@ -294,6 +284,7 @@ body {
 }
 
 
+
 /* How To Play Media Queries */
 
 @media (max-width: 600px) {
@@ -302,13 +293,6 @@ body {
   }
 }
 
-@media (max-width: 380px) {
-  .how-to-play {
-    font-size: 10px;
-  }
-}
-
-/* Quiz Meida Queries */
 @media (max-width: 400px) {
   #options-btn {
     grid-template-columns: none;
@@ -331,6 +315,18 @@ body {
   }
   .how-to-play {
     margin-top: 55px;
+  }
+}
+
+@media (max-width: 380px) {
+  .how-to-play {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .start-game-container h1 {
+    font-size: 30px;
   }
 }
 

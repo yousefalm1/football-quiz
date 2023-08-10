@@ -4,10 +4,6 @@
 
 ![am i responsive](assets/documentation-webp/amiresponsive.webp)
 
-
-
-
-
 ## User Experience
 ### User Stories
 * As a parent, I wanted to bond with my children by participating in a family-friendly quiz, and this quiz did just that.
@@ -71,26 +67,21 @@
 ![Image of football used as logo](/assets/images/logo.png) 
 
 
-### Typography
-
 ### Colour Scheme
-* the color scheme used was based on the colors seen on football pitch this inlcudes black, green and white.
 
-* the green used was lime green since it pops out more than other greens,This green was also used for all buttons on the page before being hovered upon.
+* The color scheme is inspired by football pitches, incorporating black, green, and white.
+
+* Lime Green: Used for buttons before hover interactions due to its strong visibility.
 ![Image of lime green](/documentation/lime-green.png)
 
-
-* the color of green for when the user hovers over the buttons on the page is dark green, this was used to add contrast between the lime green color so the user knows when they hoverd over the button
-
+* Dark Green (Hover): When users hover over buttons, a dark green shade creates contrast and indicates interactivity.
 ![Image of dark green](/documentation/dark-green.png)
 
-* The other green used was for when the user selects the correct answer this green was used to diffrenacet between the green button and wether the answer  was correct or not.
+* Correct Answer Green: Another shade of green highlights correct answers, distinguishing them from standard button color.
 ![Image of correct green](/documentation/correct-green.png)
 
-* The color for when the answer the user selected was incorrect was a red similar to the correct green this was to make it look aseticlly pleasing and not have one dark red and one light green
+* Incorrect Answer Red: To retain the quiz's aesthetically pleasing appearance, incorrect answers are marked with a colour similar to the correct answer's green.
 ![Image of correct red](/documentation/incorrect-red.png)
-
-
 
 
 
@@ -146,8 +137,21 @@
     * 601px - and above
 
 * Bugs 
-    * Bug 1: 
-## Credits
+    * Problem 1: When the user picked easy mode the timer is remvoed however when the time reaches zero it redirects the user to the show score.
+    - Solution 1: Moving setInterval(startTimer, 1000) to the hardBtn.addEventListener("click", function(e)) 
+
+    * Problem 2: The game mode btns didnt go away when the clicked either mode btns.
+    - Solution 2: Added a [0] to the const container = document.getElementsByClassName('mode-con')[0] this make the class i added to the game mode btns to go away when i click either mode btns.
+
+    * Problem 3: The margins on the how to play looked off.
+    - Solution 3: Added  margin-top: 55px to how-to-play.
+
+    * Problem 4: The background picture file was too big which made it take a while to load which affected the user experience.
+    * Solution 4 : Used tinyPng to make it smaller which improved load times.
+
+* Unfixed Bugs
+    * None
+
 ### Code
 * I used https://www.youtube.com/watch?v=x7WJEmxNlEs for the timer to help me understand how to incorporate a timer into the quiz.
 
