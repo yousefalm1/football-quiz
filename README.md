@@ -2,7 +2,7 @@
 
 "Football Quiz" is an exciting multiple-choice quiz with two levels: easy and hard. Test your football knowledge with fun questions about players, teams, and history. Choose the easy level for beginners or challenge yourself with the hard level, which includes a thrilling timer to keep you on your toes [here](https://yousefalm1.github.io/football-quiz/)
 
-![am i responsive](assets/documentation-webp/amiresponsive.webp)
+![am i responsive](/documentation/ui-dev.png)
 
 ## User Experience
 ### User Stories
@@ -62,7 +62,7 @@
 ## Design
 ### Images Used
 * Background : The background image of the quiz is a cartoon bird's-eye view of a football pitch. This was chosen because it is relevant to the quiz's topic and gives users the impression that the questions are part of the game, creating a strong connection between the quiz and football.
-![Image of football pitch used as background](/assets/images/football-pitch.jpg) 
+![Image of football pitch used as background](/assets/images/football-pitch.webp) 
 * Logo : The football-themed logo was chosen to complement the quiz's theme 
 ![Image of football used as logo](/assets/images/logo.png) 
 
