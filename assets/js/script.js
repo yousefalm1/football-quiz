@@ -199,7 +199,7 @@ let score = 0;
 
 // Timer
 // set the starting minutes to 30 sec
-const startingMinutes = 0.50;
+const startingMinutes = 1;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
@@ -466,13 +466,3 @@ hardBtn.addEventListener("click", function (e) {
 
 
 
-
-
-
-
-
-// bugs i fixed
-// make it that the timer only starts when you click the game modes on hard mode 
-// the timer on the easy game mode still works but dosent show so it redirects you the show score screen same as hard mode
-// added a [0] to the const container = document.getElementsByClassName('mode-con')[0] this make the class i added to the game mode btns to go away when i click either mode btns
-// <a> was outside the bottom i fixed it by adding onlcikc
