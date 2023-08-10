@@ -198,8 +198,8 @@ let score = 0;
 
 
 // Timer
-// set the starting minutes to 30 sec
-const startingMinutes = 1;
+// set the starting minutes to 1 min
+const startingMinutes = 1.0;
 // convert the starting minutes to seconds
 let time = startingMinutes * 60;
 let timerInterval;
